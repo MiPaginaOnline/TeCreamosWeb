@@ -3,9 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
-        /* Fuente y base */
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -16,18 +22,13 @@
             animation: fadeIn 2s ease-in;
         }
 
-        /* Animación de entrada */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.95); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        /* Encabezado */
+        /* Encabezado con fuente informal */
         header {
             background-color: #003366;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
+            font-family: 'Fredoka One', cursive;
         }
 
         header h1 {
@@ -36,20 +37,27 @@
         }
 
         header p {
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 1.2em;
+            line-height: 1.5;
         }
 
-        /* Barra de navegación sticky */
+        /* Sticky flotante con blur */
         nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
             display: flex;
             justify-content: center;
-            background-color: #002244;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            padding: 10px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            align-items: center;
+            background-color: rgba(0, 34, 68, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 10px 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
         }
 
         nav a {
@@ -63,13 +71,29 @@
         }
 
         nav a:hover {
-            background-color: #004a99;
+            background-color: rgba(0, 76, 153, 0.8);
+        }
+
+        /* Logo de la empresa */
+        .logo {
+            margin-right: 30px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span:first-child {
+            color: #003366; /* T azul fuerte */
+        }
+        .logo span:nth-child(2) {
+            color: #00ccff; /* a azul claro */
         }
 
         /* Secciones */
         section {
             max-width: 1000px;
-            margin: 60px auto;
+            margin: 120px auto 60px auto; /* espacio top para sticky */
             padding: 40px 20px;
             background-color: #ffffff;
             border-radius: 10px;
@@ -183,6 +207,10 @@
             nav a {
                 margin: 5px 0;
             }
+
+            .logo {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -190,10 +218,13 @@
 
     <header>
         <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
-        <p>Somos un equipo comprometido en llevar tu negocio al siguiente nivel con presencia digital profesional. Tu éxito online es nuestra prioridad.</p>
+        <p>Somos un equipo creativo y profesional que se dedica a ayudar a negocios a crecer online. Creamos páginas web, configuramos redes sociales y te damos asesoramiento para que tu presencia digital sea exitosa y confiable.</p>
     </header>
 
     <nav>
+        <div class="logo">
+            <span>Te</span><span>Creamos</span><span>Web+</span>
+        </div>
         <a href="#servicios">Servicios</a>
         <a href="#precios">Precios</a>
         <a href="#requisitos">Requisitos</a>
@@ -202,7 +233,12 @@
 
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
-        <p>Ayudo a negocios a tener una presencia online efectiva, atrayendo más clientes y mejorando su imagen digital. Nuestros servicios son adaptados a tus necesidades y objetivos.</p>
+        <p>Ayudo a negocios a tener una presencia online efectiva, atrayendo más clientes y mejorando su imagen digital. Nuestros servicios son adaptados a tus necesidades y objetivos. Con nosotros tendrás:</p>
+        <ul>
+            <li>✅ Página web profesional, moderna y adaptable a cualquier dispositivo.</li>
+            <li>✅ Redes sociales configuradas y listas para promocionar tu negocio.</li>
+            <li>✅ Asesoramiento personalizado para que puedas gestionar tu presencia digital.</li>
+        </ul>
 
         <div class="servicio-cards">
             <div class="card">
@@ -256,7 +292,6 @@
             <li>🛍 Lista de productos/servicios con precios</li>
             <li>📷 Fotografías si quieres incluirlas</li>
         </ul>
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1000" alt="Trabajo en equipo" class="section-img">
     </section>
 
     <section id="contacto">
@@ -266,8 +301,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Te Hacemos Tu Propia Página Web – info.tecreamosweb@gmail.com</p>
+        <p>&copy; 2025 TeCreamosWeb – info.tecreamosweb@gmail.com</p>
     </footer>
 
 </body>
 </html>
+
