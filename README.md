@@ -1,5 +1,4 @@
 Te Hacemos Tu Propia Página Web.
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
