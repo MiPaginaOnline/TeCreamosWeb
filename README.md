@@ -9,31 +9,28 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fb;
-            color: #333;
+            background: url('https://images.unsplash.com/photo-1605902711622-cfb43c443f3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1400') center/cover no-repeat;
+            color: #f0f0f0;
         }
 
         header {
-            background: url('https://images.unsplash.com/photo-1565372915125-0fdbdf5e2fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzaW5lc3MlMjBjcm93Z3xlbnwwfHx8fDE2OTU0NzY5ODI&ixlib=rb-4.0.3&q=80&w=1400') center/cover no-repeat;
-            color: white;
-            padding: 80px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
             text-align: center;
+            padding: 80px 20px;
         }
 
         header h1 {
             margin: 0;
             font-size: 2em;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
         }
 
         header p {
             font-size: 1.2em;
-            margin-top: 10px;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+            margin-top: 15px;
         }
 
         nav {
-            background-color: #003366;
+            background-color: rgba(0, 51, 102, 0.9);
             padding: 12px;
             text-align: center;
         }
@@ -53,11 +50,13 @@
         section {
             max-width: 1000px;
             margin: 60px auto;
-            padding: 0 20px;
+            padding: 40px 20px;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 10px;
         }
 
         h2 {
-            color: #003366;
+            color: #00ccff;
             text-align: center;
             margin-bottom: 30px;
             font-size: 2em;
@@ -70,10 +69,10 @@
         }
 
         .card {
-            background-color: white;
+            background-color: rgba(255,255,255,0.1);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             transition: transform 0.3s;
         }
 
@@ -85,24 +84,20 @@
 
         .card-content {
             padding: 20px;
+            color: #f0f0f0;
         }
 
         .card-content h3 {
             margin-top: 0;
-            color: #003366;
-        }
-
-        .card-content p {
-            line-height: 1.6;
+            color: #00ccff;
         }
 
         .precio {
-            background-color: #e6f0ff;
+            background-color: rgba(0, 102, 204, 0.8);
             padding: 25px;
-            border-left: 6px solid #003366;
+            border-left: 6px solid #00ccff;
             margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s;
         }
 
@@ -117,8 +112,8 @@
         .boton-contacto {
             display: inline-block;
             padding: 14px 28px;
-            background-color: #0066cc;
-            color: white;
+            background-color: #00ccff;
+            color: #000;
             text-decoration: none;
             border-radius: 8px;
             margin-top: 20px;
@@ -127,23 +122,23 @@
         }
 
         .boton-contacto:hover {
-            background-color: #004a99;
+            background-color: #0099cc;
             transform: translateY(-3px);
         }
 
         footer {
-            background-color: #003366;
+            background-color: rgba(0, 51, 102, 0.9);
             color: white;
             text-align: center;
             padding: 25px;
-            margin-top: 80px;
+            margin-top: 40px;
         }
 
         .section-img {
             max-width: 100%;
             border-radius: 10px;
             margin-top: 20px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
         }
 
         @media (max-width: 600px) {
@@ -162,6 +157,7 @@
 
     <header>
         <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
+        <p>Somos un equipo comprometido en llevar tu negocio al siguiente nivel con presencia digital profesional. Tu éxito online es nuestra prioridad.</p>
     </header>
 
     <nav>
@@ -173,7 +169,7 @@
 
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
-        <p>Si tu negocio aún no tiene presencia online, puedo ayudarte a atraer más clientes mediante soluciones digitales profesionales.</p>
+        <p>Ayudo a negocios a tener una presencia online efectiva, atrayendo más clientes y mejorando su imagen digital. Nuestros servicios son adaptados a tus necesidades y objetivos.</p>
 
         <div class="servicio-cards">
             <div class="card">
@@ -188,7 +184,7 @@
                 <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Redes sociales + Página web">
                 <div class="card-content">
                     <h3>📱 Redes sociales + Página web</h3>
-                    <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Estrategias básicas para aumentar visibilidad y atraer clientes.</p>
+                    <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Estrategias para aumentar visibilidad y atraer clientes.</p>
                 </div>
             </div>
 
@@ -196,7 +192,7 @@
                 <img src="https://images.unsplash.com/photo-1565372915125-0fdbdf5e2fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Asesoramiento">
                 <div class="card-content">
                     <h3>💡 Asesoramiento</h3>
-                    <p>Aprende a manejar tus nuevas herramientas digitales con soporte y guía básica. Sácale el máximo partido a tu presencia online.</p>
+                    <p>Aprende a manejar tus nuevas herramientas digitales con soporte y guía básica para aprovechar al máximo tu presencia online.</p>
                 </div>
             </div>
         </div>
@@ -212,13 +208,13 @@
 
         <div class="precio">
             <h3>📱 Redes sociales + Página web – <strong>75€</strong></h3>
-            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Perfecto para aumentar visibilidad. <strong>Precio negociable</strong> si se combina con otros servicios.</p>
+            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. <strong>Precio negociable</strong> si se combina con otros servicios.</p>
         </div>
     </section>
 
     <section id="requisitos">
         <h2>¿Qué necesito de ti?</h2>
-        <p>Para crear una página web o redes sociales efectivas, necesito que me envíes:</p>
+        <p>Para crear tu presencia digital profesional, necesito que me envíes:</p>
         <ul>
             <li>📋 Nombre del negocio</li>
             <li>🕒 Horarios de apertura</li>
@@ -233,7 +229,7 @@
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Si quieres dar el paso y digitalizar tu negocio, escríbeme para recibir una propuesta personalizada y empezar a crecer online.</p>
-        <a href="mailto:tecreamostupáginaweb@gmail.com" class="boton-contacto">📩 Escríbeme</a>
+        <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbeme</a>
     </section>
 
     <footer>
