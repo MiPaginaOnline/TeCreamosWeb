@@ -3,10 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</title>
-    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
-        /* Animación de entrada */
         @keyframes fadeIn {
             0% { opacity: 0; transform: scale(0.95); }
             100% { opacity: 1; transform: scale(1); }
@@ -22,17 +20,17 @@
             animation: fadeIn 2s ease-in;
         }
 
-        /* Encabezado con fuente informal */
         header {
             background-color: #003366;
             color: white;
-            padding: 80px 20px;
+            padding: 60px 20px; /* menos espacio */
             text-align: center;
             font-family: 'Fredoka One', cursive;
         }
 
         header h1 {
             margin: 0;
+            font-weight: normal; /* quitar negrita */
             font-size: 2em;
         }
 
@@ -42,7 +40,7 @@
             line-height: 1.5;
         }
 
-        /* Sticky flotante con blur */
+        /* Sticky flotante */
         nav {
             position: fixed;
             top: 20px;
@@ -74,7 +72,6 @@
             background-color: rgba(0, 76, 153, 0.8);
         }
 
-        /* Logo de la empresa */
         .logo {
             margin-right: 30px;
             font-family: 'Fredoka One', cursive;
@@ -83,17 +80,13 @@
             align-items: center;
         }
 
-        .logo span:first-child {
-            color: #003366; /* T azul fuerte */
-        }
-        .logo span:nth-child(2) {
-            color: #00ccff; /* a azul claro */
-        }
+        .logo span:first-child { color: #003366; }
+        .logo span:nth-child(2) { color: #00ccff; }
 
         /* Secciones */
         section {
             max-width: 1000px;
-            margin: 120px auto 60px auto; /* espacio top para sticky */
+            margin: 100px auto 60px auto; /* ajustar top */
             padding: 40px 20px;
             background-color: #ffffff;
             border-radius: 10px;
@@ -103,7 +96,7 @@
         h2 {
             color: #003366;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px; /* menos espacio */
             font-size: 2em;
         }
 
@@ -122,9 +115,7 @@
             transition: transform 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+        .card:hover { transform: translateY(-5px); }
 
         .card img {
             width: 100%;
@@ -139,11 +130,11 @@
         .card-content h3 {
             margin-top: 0;
             color: #003366;
+            border-bottom: 3px solid #00ccff; /* línea turquesa debajo */
+            padding-bottom: 5px;
         }
 
-        .card-content p {
-            line-height: 1.6;
-        }
+        .card-content p { line-height: 1.6; }
 
         /* Precios */
         .precio {
@@ -155,15 +146,10 @@
             transition: transform 0.3s;
         }
 
-        .precio:hover {
-            transform: translateY(-5px);
-        }
+        .precio:hover { transform: translateY(-5px); }
 
-        ul {
-            line-height: 1.8;
-        }
+        ul { line-height: 1.8; }
 
-        /* Botón contacto */
         .boton-contacto {
             display: inline-block;
             padding: 14px 28px;
@@ -196,21 +182,10 @@
         }
 
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            nav {
-                flex-direction: column;
-            }
-
-            nav a {
-                margin: 5px 0;
-            }
-
-            .logo {
-                margin-bottom: 10px;
-            }
+            header h1 { font-size: 1.5em; }
+            nav { flex-direction: column; }
+            nav a { margin: 5px 0; }
+            .logo { margin-bottom: 10px; }
         }
     </style>
 </head>
@@ -218,7 +193,7 @@
 
     <header>
         <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
-        <p>Somos un equipo creativo y profesional que se dedica a ayudar a negocios a crecer online. Creamos páginas web, configuramos redes sociales y te damos asesoramiento para que tu presencia digital sea exitosa y confiable.</p>
+        <p>Somos un equipo creativo y profesional que se dedica a ayudar a negocios a crecer online. Creamos páginas web, configuramos redes sociales y ofrecemos asesoramiento para que tu presencia digital sea efectiva y confiable. Una buena presencia online puede aumentar tus clientes, mejorar la imagen de tu negocio y aumentar tus ventas.</p>
     </header>
 
     <nav>
@@ -233,11 +208,12 @@
 
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
-        <p>Ayudo a negocios a tener una presencia online efectiva, atrayendo más clientes y mejorando su imagen digital. Nuestros servicios son adaptados a tus necesidades y objetivos. Con nosotros tendrás:</p>
+        <p>Ayudo a negocios a tener una presencia online efectiva, atrayendo más clientes y mejorando su imagen digital. Tener una página web y redes sociales bien configuradas puede:</p>
         <ul>
-            <li>✅ Página web profesional, moderna y adaptable a cualquier dispositivo.</li>
-            <li>✅ Redes sociales configuradas y listas para promocionar tu negocio.</li>
-            <li>✅ Asesoramiento personalizado para que puedas gestionar tu presencia digital.</li>
+            <li>✅ Incrementar la visibilidad de tu negocio frente a nuevos clientes.</li>
+            <li>✅ Facilitar la comunicación con tus clientes a través de contacto online.</li>
+            <li>✅ Aumentar ventas mostrando tus productos y servicios de manera profesional.</li>
+            <li>✅ Construir confianza y credibilidad en tu marca.</li>
         </ul>
 
         <div class="servicio-cards">
@@ -306,4 +282,5 @@
 
 </body>
 </html>
+
 
