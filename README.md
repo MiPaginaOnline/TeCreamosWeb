@@ -1,10 +1,8 @@
-Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto.
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creador de Páginas Web</title>
+    <title>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -24,7 +22,7 @@ Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamo
 
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 2em;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
         }
 
@@ -141,7 +139,6 @@ Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamo
             margin-top: 80px;
         }
 
-        /* Imagenes dentro de secciones */
         .section-img {
             max-width: 100%;
             border-radius: 10px;
@@ -151,7 +148,7 @@ Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamo
 
         @media (max-width: 600px) {
             header h1 {
-                font-size: 2em;
+                font-size: 1.5em;
             }
 
             nav a {
@@ -164,8 +161,7 @@ Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamo
 <body>
 
     <header>
-        <h1>Creador de Páginas Web</h1>
-        <p>Transforma tu negocio con presencia digital profesional</p>
+        <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
     </header>
 
     <nav>
@@ -189,10 +185,10 @@ Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamo
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Redes sociales">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Redes sociales + Página web">
                 <div class="card-content">
-                    <h3>📱 Redes sociales + Página Web</h3>
-                    <p>Configuración y diseño de perfiles en Facebook, Instagram y más. Estrategias básicas para aumentar tu visibilidad y atraer clientes.</p>
+                    <h3>📱 Redes sociales + Página web</h3>
+                    <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Estrategias básicas para aumentar visibilidad y atraer clientes.</p>
                 </div>
             </div>
 
@@ -215,8 +211,8 @@ Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamo
         </div>
 
         <div class="precio">
-            <h3>📱 Creación de redes sociales – <strong>75€</strong></h3>
-            <p>Configuración y diseño inicial de perfiles en redes sociales. Perfecto para aumentar visibilidad. <strong>Precio negociable</strong> si se combina con otros servicios.</p>
+            <h3>📱 Redes sociales + Página web – <strong>75€</strong></h3>
+            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Perfecto para aumentar visibilidad. <strong>Precio negociable</strong> si se combina con otros servicios.</p>
         </div>
     </section>
 
@@ -237,11 +233,11 @@ Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamo
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Si quieres dar el paso y digitalizar tu negocio, escríbeme para recibir una propuesta personalizada y empezar a crecer online.</p>
-        <a href="mailto:tuemail@ejemplo.com" class="boton-contacto">📩 Escríbeme</a>
+        <a href="mailto:tecreamostupáginaweb@gmail.com" class="boton-contacto">📩 Escríbeme</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Creador de Páginas Web – Todos los derechos reservados</p>
+        <p>&copy; 2025 Te Hacemos Tu Propia Página Web – Todos los derechos reservados</p>
     </footer>
 
 </body>
