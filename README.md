@@ -5,18 +5,29 @@
     <title>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Fuente y base */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://images.unsplash.com/photo-1605902711622-cfb43c443f3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1400') center/cover no-repeat;
-            color: #f0f0f0;
+            background-color: #f4f7fb;
+            color: #333;
+            overflow-x: hidden;
+            animation: fadeIn 2s ease-in;
         }
 
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Encabezado */
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #003366;
+            color: white;
+            padding: 60px 20px;
             text-align: center;
-            padding: 80px 20px;
         }
 
         header h1 {
@@ -25,14 +36,20 @@
         }
 
         header p {
+            margin-top: 10px;
             font-size: 1.2em;
-            margin-top: 15px;
         }
 
+        /* Barra de navegación sticky */
         nav {
-            background-color: rgba(0, 51, 102, 0.9);
-            padding: 12px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: #002244;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         nav a {
@@ -40,28 +57,33 @@
             margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #00ccff;
+            background-color: #004a99;
         }
 
+        /* Secciones */
         section {
             max-width: 1000px;
             margin: 60px auto;
             padding: 40px 20px;
-            background-color: rgba(0,0,0,0.6);
+            background-color: #ffffff;
             border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: #00ccff;
+            color: #003366;
             text-align: center;
             margin-bottom: 30px;
             font-size: 2em;
         }
 
+        /* Cards de servicios */
         .servicio-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -69,11 +91,15 @@
         }
 
         .card {
-            background-color: rgba(255,255,255,0.1);
+            background-color: #e6f0ff;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .card img {
@@ -84,18 +110,22 @@
 
         .card-content {
             padding: 20px;
-            color: #f0f0f0;
         }
 
         .card-content h3 {
             margin-top: 0;
-            color: #00ccff;
+            color: #003366;
         }
 
+        .card-content p {
+            line-height: 1.6;
+        }
+
+        /* Precios */
         .precio {
-            background-color: rgba(0, 102, 204, 0.8);
+            background-color: #e6f0ff;
             padding: 25px;
-            border-left: 6px solid #00ccff;
+            border-left: 6px solid #003366;
             margin: 20px 0;
             border-radius: 8px;
             transition: transform 0.3s;
@@ -109,11 +139,12 @@
             line-height: 1.8;
         }
 
+        /* Botón contacto */
         .boton-contacto {
             display: inline-block;
             padding: 14px 28px;
-            background-color: #00ccff;
-            color: #000;
+            background-color: #0066cc;
+            color: white;
             text-decoration: none;
             border-radius: 8px;
             margin-top: 20px;
@@ -122,12 +153,12 @@
         }
 
         .boton-contacto:hover {
-            background-color: #0099cc;
+            background-color: #004a99;
             transform: translateY(-3px);
         }
 
         footer {
-            background-color: rgba(0, 51, 102, 0.9);
+            background-color: #003366;
             color: white;
             text-align: center;
             padding: 25px;
@@ -138,7 +169,6 @@
             max-width: 100%;
             border-radius: 10px;
             margin-top: 20px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
         }
 
         @media (max-width: 600px) {
@@ -146,9 +176,12 @@
                 font-size: 1.5em;
             }
 
+            nav {
+                flex-direction: column;
+            }
+
             nav a {
-                display: block;
-                margin: 10px 0;
+                margin: 5px 0;
             }
         }
     </style>
@@ -228,12 +261,12 @@
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>Si quieres dar el paso y digitalizar tu negocio, escríbeme para recibir una propuesta personalizada y empezar a crecer online.</p>
+        <p>Si quieres dar el paso y digitalizar tu negocio, escríbeme para recibir una propuesta personalizada y empezar a crecer online. info.tecreamosweb@gmail.com</p>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbeme</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Te Hacemos Tu Propia Página Web – Todos los derechos reservados</p>
+        <p>&copy; 2025 Te Hacemos Tu Propia Página Web – info.tecreamosweb@gmail.com</p>
     </footer>
 
 </body>
