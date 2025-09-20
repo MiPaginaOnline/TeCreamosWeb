@@ -4,16 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TuNombre - TeCreamosWeb</title>
-
-    <!-- SEO -->
-    <meta name="description" content="TeCreamosWeb diseña páginas web profesionales, redes sociales y asesoramiento digital para que tu negocio crezca online.">
-    <meta name="keywords" content="páginas web, diseño web, redes sociales, asesoramiento digital, marketing online">
-    <meta name="author" content="TeCreamosWeb">
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/png">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -38,24 +28,11 @@
             padding: 100px 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
+        header h1 { margin: 0; font-size: 2.2em; }
+        header p { margin-top: 15px; font-size: 1.2em; line-height: 1.6; color: #cccccc; }
+        header p span.resaltar { color: #ffffff; font-weight: 600; }
 
-        header p {
-            margin-top: 15px;
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #cccccc;
-        }
-
-        header p span.resaltar {
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        /* Sticky flotante */
+        /* Sticky nav */
         nav {
             position: fixed;
             top: 20px;
@@ -63,39 +40,47 @@
             transform: translateX(-50%);
             z-index: 1000;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background-color: rgba(20, 20, 20, 0.7);
             backdrop-filter: blur(10px);
             border-radius: 12px;
-            padding: 10px 30px;
+            padding: 10px 20px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            width: auto;
+            max-width: 90%;
         }
 
-        nav a {
+        .logo { font-family: 'Fredoka One', cursive; font-size: 1.5em; display: flex; align-items: center; }
+        .logo span:first-child { color: #00aaff; }
+        .logo span:nth-child(2) { color: #ffffff; }
+        .logo span:nth-child(3) { color: #ffcc00; }
+
+        .nav-links { display: flex; }
+        .nav-links a {
             color: #ffffff;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
             padding: 8px 12px;
             border-radius: 5px;
             transition: 0.3s;
         }
+        .nav-links a:hover { background-color: rgba(255, 255, 255, 0.1); }
 
-        nav a:hover { background-color: rgba(255, 255, 255, 0.1); }
-
-        /* Logo con fuente original */
-        .logo {
-            margin-right: 20px;
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
+        /* Hamburger icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
         }
-
-        .logo span:first-child { color: #00aaff; }
-        .logo span:nth-child(2) { color: #ffffff; }
-        .logo span:nth-child(3) { color: #ffcc00; }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
 
         /* Secciones */
         section {
@@ -109,27 +94,16 @@
             transform: translateY(40px);
             transition: all 0.8s ease-out;
         }
+        section.visible { opacity: 1; transform: translateY(0); }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        h2 { color: #00aaff; text-align: center; margin-bottom: 20px; font-size: 2em; }
 
-        h2 {
-            color: #00aaff;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-
-        /* Servicios (grid con 3 tarjetas) */
         .servicio-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
-
         .card {
             background-color: #111111;
             border-radius: 10px;
@@ -139,13 +113,10 @@
             text-align: center;
             padding: 20px;
         }
-
         .card:hover { transform: translateY(-5px); }
-
         .card h3 { color: #00aaff; margin-top: 15px; }
         .card p { color: #cccccc; font-size: 0.95em; }
 
-        /* Precios */
         .precio {
             background-color: #111111;
             padding: 25px;
@@ -168,7 +139,6 @@
             font-weight: bold;
             transition: 0.3s;
         }
-
         .boton-contacto:hover {
             background-color: #0088cc;
             transform: translateY(-3px);
@@ -183,34 +153,23 @@
             font-size: 0.9em;
         }
 
-        /* Versión móvil */
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; width: 100%; }
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
+            nav { flex-direction: row; justify-content: space-between; }
+        }
+
         @media (max-width: 600px) {
             header h1 { font-size: 1.6em; }
             header p { font-size: 1em; }
-
-            /* Sticky nav móvil compacto vertical */
-            nav {
-                flex-direction: column;
-                padding: 10px 15px;
-                width: auto;
-            }
-            nav a {
-                margin: 5px 0;
-                font-size: 0.9em;
-                padding: 6px 12px;
-            }
-            .logo {
-                margin-bottom: 10px;
-                font-size: 1.2em;
-            }
-
             .servicio-cards { grid-template-columns: 1fr; }
             .boton-contacto { display: block; width: 100%; text-align: center; }
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
         <p>Una buena presencia online puede <span class="resaltar">aumentar clientes</span>, mejorar la imagen de tu negocio y <span class="resaltar">multiplicar tus ventas</span>.</p>
@@ -220,18 +179,24 @@
         <div class="logo">
             <span>Te</span><span>Creamos</span><span>Web+</span>
         </div>
-        <a href="#servicios">Servicios</a>
-        <a href="#porque">¿Por qué elegirnos?</a>
-        <a href="#precios">Precios</a>
-        <a href="#requisitos">Información requerida</a>
-        <a href="#contacto">Contacto</a>
+        <div class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#porque">¿Por qué elegirnos?</a>
+            <a href="#precios">Precios</a>
+            <a href="#requisitos">Información requerida</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
 
-    <!-- 1. Qué ofrezco -->
+    <!-- Secciones -->
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
-
         <div class="servicio-cards">
             <div class="card">
                 <h3>🌐 Página Web Profesional</h3>
@@ -248,7 +213,6 @@
         </div>
     </section>
 
-    <!-- 2. Por qué elegirnos -->
     <section id="porque">
         <h2>¿Por qué elegirnos?</h2>
         <ul>
@@ -260,7 +224,6 @@
         </ul>
     </section>
 
-    <!-- 3. Precios -->
     <section id="precios">
         <h2>Precios</h2>
         <div class="precio">
@@ -273,7 +236,6 @@
         </div>
     </section>
 
-    <!-- 4. Información requerida -->
     <section id="requisitos">
         <h2>Información requerida</h2>
         <p>Para poder desarrollar una presencia digital completa y efectiva para tu negocio, necesitamos algunos datos fundamentales:</p>
@@ -287,10 +249,10 @@
         </ul>
     </section>
 
-    <!-- 5. Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada. info.tecreamosweb@gmail.com</p>
+        <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
+        info.tecreamosweb@gmail.com
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbenos</a>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">🚀 Solicita tu web hoy</a>
     </section>
@@ -300,20 +262,24 @@
     </footer>
 
     <script>
-        // Animaciones al hacer scroll
+        // Scroll animations
         const sections = document.querySelectorAll("section");
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
+                if (entry.isIntersecting) entry.target.classList.add("visible");
             });
         }, { threshold: 0.2 });
-
         sections.forEach(section => observer.observe(section));
+
+        // Hamburger menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
+
 
 
 
