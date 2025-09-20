@@ -4,6 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeCreamosWeb</title>
 
+    <!-- SEO -->
+    <meta name="description" content="TeCreamosWeb diseña páginas web profesionales y personaliza tus redes sociales para que tu negocio crezca online. Aumenta clientes y ventas con presencia digital.">
+    <meta name="keywords" content="páginas web, diseño web, redes sociales, marketing digital, negocios online, presencia digital">
+    <meta name="author" content="TeCreamosWeb">
+
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
 
@@ -21,8 +26,8 @@
             margin: 0;
             padding: 0;
             background: radial-gradient(circle at top left, rgba(0, 100, 200, 0.15), transparent 60%), 
-                        #000000; /* fondo negro con detalle de luz */
-            color: #e0e0e0; /* color de texto más elegante */
+                        #000000;
+            color: #e0e0e0;
             overflow-x: hidden;
             animation: fadeIn 2s ease-in;
         }
@@ -101,6 +106,14 @@
             background-color: rgba(20, 20, 20, 0.8);
             border-radius: 10px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         h2 {
@@ -203,14 +216,82 @@
         <a href="#servicios">Servicios</a>
         <a href="#precios">Precios</a>
         <a href="#requisitos">Requisitos</a>
+        <a href="#porque">¿Por qué elegirnos?</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
-    <!-- Aquí irían tus secciones (Servicios, Precios, Requisitos, Contacto) como ya teníamos antes -->
-    
+    <section id="servicios">
+        <h2>¿Qué ofrezco?</h2>
+        <p>Ayudo a negocios a tener una presencia online efectiva, atrayendo más clientes y mejorando su imagen digital. Tener una página web y redes sociales bien configuradas puede:</p>
+        <ul>
+            <li>✅ Incrementar la visibilidad de tu negocio frente a nuevos clientes.</li>
+            <li>✅ Facilitar la comunicación con tus clientes a través de contacto online.</li>
+            <li>✅ Aumentar ventas mostrando tus productos y servicios de manera profesional.</li>
+            <li>✅ Construir confianza y credibilidad en tu marca.</li>
+        </ul>
+    </section>
+
+    <section id="precios">
+        <h2>Precios</h2>
+        <div class="precio">
+            <h3>🌐 Página web básica – <strong>50€</strong></h3>
+            <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. <strong>Precio negociable según tus necesidades.</strong></p>
+        </div>
+        <div class="precio">
+            <h3>📱 Redes sociales + Página web – <strong>75€</strong></h3>
+            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. <strong>Precio negociable</strong> si se combina con otros servicios.</p>
+        </div>
+    </section>
+
+    <section id="requisitos">
+        <h2>¿Qué necesito de ti?</h2>
+        <ul>
+            <li>📋 Nombre del negocio</li>
+            <li>🕒 Horarios de apertura</li>
+            <li>📍 Dirección o zona</li>
+            <li>📞 Contacto (teléfono, email...)</li>
+            <li>🛍 Lista de productos/servicios con precios</li>
+            <li>📷 Fotografías si quieres incluirlas</li>
+        </ul>
+    </section>
+
+    <section id="porque">
+        <h2>¿Por qué elegirnos?</h2>
+        <ul>
+            <li>🚀 <strong>Experiencia personalizada</strong>: cada proyecto es único y adaptado a tu negocio.</li>
+            <li>🎨 <strong>Diseños modernos y atractivos</strong>: que captan la atención de tus clientes.</li>
+            <li>💡 <strong>Acompañamiento y asesoramiento</strong>: no solo creamos tu web, te enseñamos a usarla.</li>
+            <li>📈 <strong>Enfoque en resultados</strong>: nuestro objetivo es que consigas más clientes y más ventas.</li>
+            <li>🔒 <strong>Confianza y seguridad</strong>: trabajamos de manera transparente, con precios claros y ajustados.</li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada para empezar a crecer online.</p>
+        <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbenos</a>
+        <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">🚀 Solicita tu web hoy</a>
+    </section>
+
     <footer>
         <p>&copy; 2025 TeCreamosWeb – Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        // Animaciones al hacer scroll
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 
 </body>
 </html>
