@@ -1,6 +1,7 @@
 
 <html lang="es">
 <head>
+    <meta name="google-site-verification" content="zcqWNXO5PxwuhC8eUUWnLJH8WTvc4ASWszyT6URT9AM" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeCreamosWeb</title>
@@ -168,7 +169,6 @@
             .boton-contacto { display: block; width: 100%; text-align: center; }
         }
     </style>
-    <meta name="google-site-verification" content="google5fa4a0e4e13f9069" />
 </head>
 <body>
     <header>
