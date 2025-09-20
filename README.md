@@ -1,10 +1,22 @@
 
 <html lang="es">
 <head>
-    <meta name="google-site-verification" content="zcqWNXO5PxwuhC8eUUWnLJH8WTvc4ASWszyT6URT9AM" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeCreamosWeb</title>
+    <title>TuNombre - TeCreamosWeb</title>
+
+    <!-- SEO -->
+    <meta name="description" content="TeCreamosWeb diseña páginas web profesionales, redes sociales y asesoramiento digital para que tu negocio crezca online.">
+    <meta name="keywords" content="páginas web, diseño web, redes sociales, asesoramiento digital, marketing online">
+    <meta name="author" content="TeCreamosWeb">
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="google5fa4a0e4e13f9069" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -194,10 +206,11 @@
         </div>
     </nav>
 
-    <!-- Secciones -->
+    <!-- 1. Qué ofrezco -->
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
+
         <div class="servicio-cards">
             <div class="card">
                 <h3>🌐 Página Web Profesional</h3>
@@ -214,6 +227,7 @@
         </div>
     </section>
 
+    <!-- 2. Por qué elegirnos -->
     <section id="porque">
         <h2>¿Por qué elegirnos?</h2>
         <ul>
@@ -225,6 +239,7 @@
         </ul>
     </section>
 
+    <!-- 3. Precios -->
     <section id="precios">
         <h2>Precios</h2>
         <div class="precio">
@@ -237,6 +252,7 @@
         </div>
     </section>
 
+    <!-- 4. Información requerida -->
     <section id="requisitos">
         <h2>Información requerida</h2>
         <p>Para poder desarrollar una presencia digital completa y efectiva para tu negocio, necesitamos algunos datos fundamentales:</p>
@@ -250,6 +266,7 @@
         </ul>
     </section>
 
+    <!-- 5. Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
         <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
@@ -272,10 +289,9 @@
         }, { threshold: 0.2 });
         sections.forEach(section => observer.observe(section));
 
-        // Hamburger menu
+        // Hamburger menu toggle
         function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
         }
     </script>
 </body>
