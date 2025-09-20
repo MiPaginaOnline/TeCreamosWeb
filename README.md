@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -217,7 +217,7 @@
         </div>
         <a href="#servicios">Servicios</a>
         <a href="#precios">Precios</a>
-        <a href="#requisitos">Requisitos</a>
+        <a href="#requisitos">Información requerida</a>
         <a href="#porque">¿Por qué elegirnos?</a>
         <a href="#contacto">Contacto</a>
     </nav>
@@ -225,6 +225,11 @@
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
+
+        <!-- Imagen representativa -->
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" 
+             alt="Soluciones digitales para negocios" 
+             style="width:100%; max-width:900px; display:block; margin:20px auto; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.5);">
 
         <div class="servicio-cards">
             <div class="card">
@@ -242,6 +247,19 @@
         </div>
     </section>
 
+    <section id="requisitos">
+        <h2>Información requerida</h2>
+        <p>Para poder desarrollar una presencia digital completa y efectiva para tu negocio, necesitamos algunos datos fundamentales:</p>
+        <ul>
+            <li>📋 Nombre del negocio</li>
+            <li>🕒 Horarios de atención</li>
+            <li>📍 Dirección o zona de operación</li>
+            <li>📞 Información de contacto (teléfono, email, etc.)</li>
+            <li>🛍 Lista de productos o servicios ofrecidos</li>
+            <li>📷 Fotografías de productos, servicios o instalaciones (opcional)</li>
+        </ul>
+    </section>
+
     <section id="precios">
         <h2>Precios</h2>
         <div class="precio">
@@ -252,18 +270,6 @@
             <h3>📱 Redes sociales + Página web – <strong>75€</strong></h3>
             <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
         </div>
-    </section>
-
-    <section id="requisitos">
-        <h2>¿Qué necesito de ti?</h2>
-        <ul>
-            <li>📋 Nombre del negocio</li>
-            <li>🕒 Horarios de apertura</li>
-            <li>📍 Dirección o zona</li>
-            <li>📞 Contacto (teléfono, email...)</li>
-            <li>🛍 Lista de productos/servicios</li>
-            <li>📷 Fotografías (opcional)</li>
-        </ul>
     </section>
 
     <section id="porque">
@@ -280,12 +286,13 @@
     <section id="contacto">
         <h2>Contacto</h2>
         <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
+        </p>info.tecreamosweb@gmail.com</p>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbenos</a>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">🚀 Solicita tu web hoy</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 TeCreamosWeb – Todos los derechos reservados</p>
+        <p>&copy; 2025 TeCreamosWeb – info.tecreamosweb@gmail.com</p>
     </footer>
 
     <script>
