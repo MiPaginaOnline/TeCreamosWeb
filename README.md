@@ -241,8 +241,9 @@
                 <h3>💡 Asesoramiento</h3>
                 <p>Te guiamos paso a paso en el uso de tus nuevas herramientas digitales y resolvemos tus dudas.</p>
                 <!-- Imagen pequeña debajo de Asesoramiento -->
-                <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44315b?auto=format&fit=crop&w=600&q=80" 
-                     alt="Asesoramiento digital" class="servicio-img">
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c44315b?auto=format&fit=crop&w=600&q=80" 
+     alt="Asesoramiento digital" class="servicio-img">
+
             </div>
             <div class="card">
                 <h3>📱 Redes Sociales</h3>
