@@ -1,9 +1,8 @@
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> TeCreamosWeb+</title>
+    <title>TeCreamosWeb+</title>
 
     <meta name="google-site-verification" content="zcqWNXO5PxwuhC8eUUWnLJH8WTvc4ASWszyT6URT9AM" />
 
@@ -177,6 +176,12 @@
         }
 
         @media (max-width: 600px) {
+            header {
+                padding: 60px 20px; /* Reducido de 100px para menos espacio */
+            }
+            section {
+                margin: 60px auto 40px auto; /* Reducido de 100px/60px */
+            }
             header h1 { font-size: 1.6em; }
             header p { font-size: 1em; }
             .servicio-cards { grid-template-columns: 1fr; }
@@ -199,6 +204,7 @@
             <a href="#porque">¿Por qué elegirnos?</a>
             <a href="#precios">Precios</a>
             <a href="#requisitos">Información requerida</a>
+            <a href="#proceso">Proceso</a>
             <a href="#contacto">Contacto</a>
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -208,9 +214,9 @@
         </div>
     </nav>
 
-    <!-- 1. Qué ofrezco -->
+    <!-- 1. Qué ofrecemos -->
     <section id="servicios">
-        <h2>¿Qué ofrezco?</h2>
+        <h2>¿Qué ofrecemos?</h2>
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
 
         <div class="servicio-cards">
@@ -268,7 +274,20 @@
         </ul>
     </section>
 
-    <!-- 5. Contacto -->
+    <!-- 5. Proceso profesional y garantía -->
+    <section id="proceso">
+        <h2>Proceso de Entrega y Garantía de Satisfacción</h2>
+        <p>En <strong>TeCreamosWeb+</strong> implementamos un enfoque transparente y orientado a resultados:</p>
+        <ul>
+            <li>💻 <strong>Desarrollo Inicial:</strong> Creamos tu página web con diseño profesional, funcionalidades optimizadas y experiencia de usuario mejorada.</li>
+            <li>📤 <strong>Entrega para Revisión:</strong> Te enviamos la página web completa para que la evalúes en un entorno de prueba.</li>
+            <li>✅ <strong>Satisfacción Garantizada:</strong> Si la web cumple con tus expectativas, realizas el pago y la página se activa definitivamente.</li>
+            <li>❌ <strong>No Aprobada:</strong> Si no estás satisfecho, no realizas ningún pago y eliminaremos la página web sin compromiso.</li>
+        </ul>
+        <p>Este modelo asegura que solo pagues por un producto que realmente te guste y funcione para tu negocio.</p>
+    </section>
+
+    <!-- 6. Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
         <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
@@ -298,6 +317,7 @@
     </script>
 </body>
 </html>
+
 
 
 
