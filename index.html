@@ -11,9 +11,6 @@
     <meta name="keywords" content="páginas web, diseño web, redes sociales, asesoramiento digital, marketing online">
     <meta name="author" content="TeCreamosWeb">
 
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="google5fa4a0e4e13f9069" />
-
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
 
@@ -39,7 +36,7 @@
             text-align: center;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            padding: 100px 20px;
+            padding: 100px 20px 60px 20px; /* Reducido el padding-bottom para menos espacio hacia sección */
         }
 
         header h1 { margin: 0; font-size: 2.2em; }
@@ -99,8 +96,8 @@
         /* Secciones */
         section {
             max-width: 1000px;
-            margin: 100px auto 60px auto;
-            padding: 40px 20px;
+            margin: 80px auto 40px auto;
+            padding: 35px 20px;
             background-color: rgba(20, 20, 20, 0.85);
             border-radius: 10px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.6);
@@ -177,10 +174,11 @@
 
         @media (max-width: 600px) {
             header {
-                padding: 60px 20px; /* Reducido de 100px para menos espacio */
+                padding: 50px 20px 40px 20px; /* Menos espacio entre header y sección */
             }
             section {
-                margin: 60px auto 40px auto; /* Reducido de 100px/60px */
+                margin: 50px auto 30px auto;
+                padding: 25px 15px;
             }
             header h1 { font-size: 1.6em; }
             header p { font-size: 1em; }
@@ -202,9 +200,9 @@
         <div class="nav-links">
             <a href="#servicios">Servicios</a>
             <a href="#porque">¿Por qué elegirnos?</a>
+            <a href="#proceso">Proceso</a>
             <a href="#precios">Precios</a>
             <a href="#requisitos">Información requerida</a>
-            <a href="#proceso">Proceso</a>
             <a href="#contacto">Contacto</a>
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -247,7 +245,20 @@
         </ul>
     </section>
 
-    <!-- 3. Precios -->
+    <!-- 3. Proceso profesional y garantía -->
+    <section id="proceso">
+        <h2>Proceso de Entrega y Garantía de Satisfacción</h2>
+        <p>En <strong>TeCreamosWeb+</strong> implementamos un enfoque transparente y orientado a resultados:</p>
+        <ul>
+            <li>💻 <strong>Desarrollo Inicial:</strong> Creamos tu página web con diseño profesional, funcionalidades optimizadas y experiencia de usuario mejorada.</li>
+            <li>📤 <strong>Entrega para Revisión:</strong> Te enviamos la página web completa para que la evalúes en un entorno de prueba.</li>
+            <li>✅ <strong>Satisfacción Garantizada:</strong> Si la web cumple con tus expectativas, realizas el pago y la página se activa definitivamente.</li>
+            <li>❌ <strong>No Aprobada:</strong> Si no estás satisfecho, no realizas ningún pago y eliminaremos la página web sin compromiso.</li>
+        </ul>
+        <p>Este modelo asegura que solo pagues por un producto que realmente te guste y funcione para tu negocio.</p>
+    </section>
+
+    <!-- 4. Precios -->
     <section id="precios">
         <h2>Precios</h2>
         <div class="precio">
@@ -260,7 +271,7 @@
         </div>
     </section>
 
-    <!-- 4. Información requerida -->
+    <!-- 5. Información requerida -->
     <section id="requisitos">
         <h2>Información requerida</h2>
         <p>Para poder desarrollar una presencia digital completa y efectiva para tu negocio, necesitamos algunos datos fundamentales:</p>
@@ -272,19 +283,6 @@
             <li>🛍 Lista de productos o servicios ofrecidos</li>
             <li>📷 Fotografías de productos, servicios o instalaciones (opcional)</li>
         </ul>
-    </section>
-
-    <!-- 5. Proceso profesional y garantía -->
-    <section id="proceso">
-        <h2>Proceso de Entrega y Garantía de Satisfacción</h2>
-        <p>En <strong>TeCreamosWeb+</strong> implementamos un enfoque transparente y orientado a resultados:</p>
-        <ul>
-            <li>💻 <strong>Desarrollo Inicial:</strong> Creamos tu página web con diseño profesional, funcionalidades optimizadas y experiencia de usuario mejorada.</li>
-            <li>📤 <strong>Entrega para Revisión:</strong> Te enviamos la página web completa para que la evalúes en un entorno de prueba.</li>
-            <li>✅ <strong>Satisfacción Garantizada:</strong> Si la web cumple con tus expectativas, realizas el pago y la página se activa definitivamente.</li>
-            <li>❌ <strong>No Aprobada:</strong> Si no estás satisfecho, no realizas ningún pago y eliminaremos la página web sin compromiso.</li>
-        </ul>
-        <p>Este modelo asegura que solo pagues por un producto que realmente te guste y funcione para tu negocio.</p>
     </section>
 
     <!-- 6. Contacto -->
