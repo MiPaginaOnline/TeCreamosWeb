@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TuNombre - TeCreamosWeb</title>
 
+    <meta name="google-site-verification" content="zcqWNXO5PxwuhC8eUUWnLJH8WTvc4ASWszyT6URT9AM" />
+
     <!-- SEO -->
     <meta name="description" content="TeCreamosWeb diseña páginas web profesionales, redes sociales y asesoramiento digital para que tu negocio crezca online.">
     <meta name="keywords" content="páginas web, diseño web, redes sociales, asesoramiento digital, marketing online">
