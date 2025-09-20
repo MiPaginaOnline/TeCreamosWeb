@@ -36,7 +36,7 @@
             text-align: center;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            padding: 100px 20px 60px 20px; /* Reducido el padding-bottom para menos espacio hacia sección */
+            padding: 100px 20px 60px 20px;
         }
 
         header h1 { margin: 0; font-size: 2.2em; }
@@ -174,7 +174,10 @@
 
         @media (max-width: 600px) {
             header {
-                padding: 50px 20px 40px 20px; /* Menos espacio entre header y sección */
+                padding: 30px 20px 20px 20px; /* Menos espacio arriba y abajo */
+            }
+            section:first-of-type {
+                padding-top: 20px; /* Compensa nav fijo */
             }
             section {
                 margin: 50px auto 30px auto;
@@ -315,13 +318,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
