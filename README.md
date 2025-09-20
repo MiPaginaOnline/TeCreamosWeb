@@ -126,6 +126,15 @@
             font-size: 2em;
         }
 
+        /* Imagen pequeña de tema web */
+        .tema-web-img {
+            display: block;
+            max-width: 200px;
+            margin: 0 auto 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
         /* Servicios (grid con 3 tarjetas) */
         .servicio-cards {
             display: grid;
@@ -148,15 +157,6 @@
 
         .card h3 { color: #00aaff; margin-top: 15px; }
         .card p { color: #cccccc; font-size: 0.95em; }
-
-        /* Imagen pequeña dentro de servicios */
-        .servicio-img {
-            display: block;
-            max-width: 300px;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-        }
 
         /* Precios */
         .precio {
@@ -204,7 +204,7 @@
             nav a { margin: 6px 0; }
             .logo { margin-bottom: 10px; font-size: 1.2em; }
             .servicio-cards { grid-template-columns: 1fr; }
-            .servicio-img { max-width: 90%; }
+            .tema-web-img { max-width: 90%; }
             .boton-contacto { display: block; width: 100%; text-align: center; }
         }
     </style>
@@ -230,6 +230,11 @@
     <!-- 1. Qué ofrezco -->
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
+
+        <!-- Imagen pequeña relacionada con web -->
+        <img src="https://images.unsplash.com/photo-1581091215369-1b18d7c1f13b?auto=format&fit=crop&w=400&q=80" 
+             alt="Diseño web" class="tema-web-img">
+
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
 
         <div class="servicio-cards">
@@ -240,10 +245,6 @@
             <div class="card">
                 <h3>💡 Asesoramiento</h3>
                 <p>Te guiamos paso a paso en el uso de tus nuevas herramientas digitales y resolvemos tus dudas.</p>
-                <!-- Imagen pequeña debajo de Asesoramiento -->
-<img src="https://images.unsplash.com/photo-1605902711622-cfb43c44315b?auto=format&fit=crop&w=600&q=80" 
-     alt="Asesoramiento digital" class="servicio-img">
-
             </div>
             <div class="card">
                 <h3>📱 Redes Sociales</h3>
