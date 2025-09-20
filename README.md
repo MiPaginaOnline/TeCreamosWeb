@@ -14,7 +14,7 @@
     <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         @keyframes fadeIn {
@@ -34,26 +34,17 @@
         /* Header con imagen de fondo */
         header {
             position: relative;
-            color: white;
             text-align: center;
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
             padding: 100px 20px;
             background: url('https://images.unsplash.com/photo-1581091215369-1b18d7c1f13b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             border-bottom: 6px solid #00aaff;
         }
 
-        .header-overlay {
-            background-color: rgba(0, 0, 0, 0.55);
-            padding: 60px 20px;
-            border-radius: 12px;
-            display: inline-block;
-            max-width: 900px;
-        }
-
         header h1 {
             margin: 0;
-            font-weight: normal;
-            font-size: 2.5em;
+            font-size: 2.2em;
         }
 
         header p {
@@ -152,6 +143,15 @@
         .card h3 { color: #00aaff; margin-top: 15px; }
         .card p { color: #cccccc; font-size: 0.95em; }
 
+        /* Imagen pequeña dentro de servicios */
+        .servicio-img {
+            display: block;
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+        }
+
         /* Precios */
         .precio {
             background-color: #111111;
@@ -198,6 +198,7 @@
             nav a { margin: 6px 0; }
             .logo { margin-bottom: 10px; font-size: 1.2em; }
             .servicio-cards { grid-template-columns: 1fr; }
+            .servicio-img { max-width: 90%; }
             .boton-contacto { display: block; width: 100%; text-align: center; }
         }
     </style>
@@ -205,10 +206,8 @@
 <body>
 
     <header>
-        <div class="header-overlay">
-            <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
-            <p>Una buena presencia online puede aumentar clientes, mejorar la imagen de tu negocio y multiplicar tus ventas.</p>
-        </div>
+        <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
+        <p>Una buena presencia online puede aumentar clientes, mejorar la imagen de tu negocio y multiplicar tus ventas.</p>
     </header>
 
     <nav>
@@ -216,20 +215,16 @@
             <span>Te</span><span>Creamos</span><span>Web+</span>
         </div>
         <a href="#servicios">Servicios</a>
+        <a href="#porque">¿Por qué elegirnos?</a>
         <a href="#precios">Precios</a>
         <a href="#requisitos">Información requerida</a>
-        <a href="#porque">¿Por qué elegirnos?</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
+    <!-- 1. Qué ofrezco -->
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
-
-        <!-- Imagen representativa -->
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" 
-             alt="Soluciones digitales para negocios" 
-             style="width:100%; max-width:900px; display:block; margin:20px auto; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.5);">
 
         <div class="servicio-cards">
             <div class="card">
@@ -239,6 +234,9 @@
             <div class="card">
                 <h3>💡 Asesoramiento</h3>
                 <p>Te guiamos paso a paso en el uso de tus nuevas herramientas digitales y resolvemos tus dudas.</p>
+                <!-- Imagen pequeña debajo de Asesoramiento -->
+                <img src="https://images.unsplash.com/photo-1581091215369-1b18d7c1f13b?auto=format&fit=crop&w=600&q=80" 
+                     alt="Asesoramiento digital" class="servicio-img">
             </div>
             <div class="card">
                 <h3>📱 Redes Sociales</h3>
@@ -247,6 +245,32 @@
         </div>
     </section>
 
+    <!-- 2. Por qué elegirnos -->
+    <section id="porque">
+        <h2>¿Por qué elegirnos?</h2>
+        <ul>
+            <li>🚀 Experiencia personalizada adaptada a tu negocio.</li>
+            <li>🎨 Diseños modernos y atractivos que llaman la atención.</li>
+            <li>💡 Te acompañamos con asesoramiento digital.</li>
+            <li>📈 Resultados rápidos y eficientes: entregamos la página funcional en un plazo aproximado de 24 horas.</li>
+            <li>🔒 Confianza y precios claros sin sorpresas.</li>
+        </ul>
+    </section>
+
+    <!-- 3. Precios -->
+    <section id="precios">
+        <h2>Precios</h2>
+        <div class="precio">
+            <h3>🌐 Página web básica – <strong>50€</strong></h3>
+            <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. Precio negociable según tus necesidades.</p>
+        </div>
+        <div class="precio">
+            <h3>📱 Redes sociales + Página web – <strong>75€</strong></h3>
+            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
+        </div>
+    </section>
+
+    <!-- 4. Información requerida -->
     <section id="requisitos">
         <h2>Información requerida</h2>
         <p>Para poder desarrollar una presencia digital completa y efectiva para tu negocio, necesitamos algunos datos fundamentales:</p>
@@ -260,33 +284,10 @@
         </ul>
     </section>
 
-    <section id="precios">
-        <h2>Precios</h2>
-        <div class="precio">
-            <h3>🌐 Página web básica – <strong>50€</strong></h3>
-            <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. Precio negociable según tus necesidades.</p>
-        </div>
-        <div class="precio">
-            <h3>📱 Redes sociales + Página web – <strong>75€</strong></h3>
-            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
-        </div>
-    </section>
-
-    <section id="porque">
-        <h2>¿Por qué elegirnos?</h2>
-        <ul>
-            <li>🚀 Experiencia personalizada adaptada a tu negocio.</li>
-            <li>🎨 Diseños modernos y atractivos que llaman la atención.</li>
-            <li>💡 Te acompañamos con asesoramiento digital.</li>
-            <li>📈 Enfoque en resultados: más clientes y ventas.</li>
-            <li>🔒 Confianza y precios claros sin sorpresas.</li>
-        </ul>
-    </section>
-
+    <!-- 5. Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
-        </p>info.tecreamosweb@gmail.com</p>
+        <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada. info.tecreamosweb@gmail.com</p>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbenos</a>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">🚀 Solicita tu web hoy</a>
     </section>
@@ -310,6 +311,7 @@
     </script>
 </body>
 </html>
+
 
 
 
