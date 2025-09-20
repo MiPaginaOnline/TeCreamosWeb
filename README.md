@@ -5,8 +5,8 @@
     <title>TeCreamosWeb</title>
 
     <!-- SEO -->
-    <meta name="description" content="TeCreamosWeb diseña páginas web profesionales y personaliza tus redes sociales para que tu negocio crezca online. Aumenta clientes y ventas con presencia digital.">
-    <meta name="keywords" content="páginas web, diseño web, redes sociales, marketing digital, negocios online, presencia digital">
+    <meta name="description" content="TeCreamosWeb diseña páginas web profesionales, redes sociales y asesoramiento digital para que tu negocio crezca online.">
+    <meta name="keywords" content="páginas web, diseño web, redes sociales, asesoramiento digital, marketing online">
     <meta name="author" content="TeCreamosWeb">
 
     <!-- Favicon -->
@@ -25,15 +25,12 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at top left, rgba(0, 100, 200, 0.15), transparent 60%), 
-                        #000000;
+            background: radial-gradient(circle at top left, rgba(0, 100, 200, 0.15), transparent 60%), #000000;
             color: #e0e0e0;
-            overflow-x: hidden;
             animation: fadeIn 2s ease-in;
         }
 
         header {
-            background: none;
             color: white;
             padding: 60px 20px;
             text-align: center;
@@ -44,8 +41,6 @@
             margin: 0;
             font-weight: normal;
             font-size: 2.5em;
-            color: #ffffff;
-            letter-spacing: 1px;
         }
 
         header p {
@@ -74,7 +69,7 @@
 
         nav a {
             color: #ffffff;
-            margin: 0 20px;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
             padding: 8px 12px;
@@ -82,12 +77,10 @@
             transition: 0.3s;
         }
 
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+        nav a:hover { background-color: rgba(255, 255, 255, 0.1); }
 
         .logo {
-            margin-right: 30px;
+            margin-right: 20px;
             font-family: 'Fredoka One', cursive;
             font-size: 1.5em;
             display: flex;
@@ -103,7 +96,7 @@
             max-width: 1000px;
             margin: 100px auto 60px auto;
             padding: 40px 20px;
-            background-color: rgba(20, 20, 20, 0.8);
+            background-color: rgba(20, 20, 20, 0.85);
             border-radius: 10px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.6);
             opacity: 0;
@@ -123,38 +116,28 @@
             font-size: 2em;
         }
 
-        /* Cards */
+        /* Servicios (grid con 3 tarjetas) */
         .servicio-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+            margin-top: 30px;
         }
 
         .card {
             background-color: #111111;
             border-radius: 10px;
-            overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            overflow: hidden;
             transition: transform 0.3s;
+            text-align: center;
+            padding: 20px;
         }
 
         .card:hover { transform: translateY(-5px); }
 
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 20px;
-            color: #dddddd;
-        }
-
-        .card-content h3 {
-            margin-top: 0;
-            color: #00aaff;
-        }
+        .card h3 { color: #00aaff; margin-top: 15px; }
+        .card p { color: #cccccc; font-size: 0.95em; }
 
         /* Precios */
         .precio {
@@ -175,7 +158,7 @@
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            margin-top: 20px;
+            margin: 10px 5px;
             font-weight: bold;
             transition: 0.3s;
         }
@@ -194,11 +177,15 @@
             font-size: 0.9em;
         }
 
+        /* Versión móvil */
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8em; }
-            nav { flex-direction: column; }
-            nav a { margin: 5px 0; }
-            .logo { margin-bottom: 10px; }
+            header h1 { font-size: 1.6em; }
+            header p { font-size: 1em; }
+            nav { flex-direction: column; padding: 15px; }
+            nav a { margin: 6px 0; }
+            .logo { margin-bottom: 10px; font-size: 1.2em; }
+            .servicio-cards { grid-template-columns: 1fr; }
+            .boton-contacto { display: block; width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -206,7 +193,7 @@
 
     <header>
         <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
-        <p>Una buena presencia online puede aumentar clientes, mejorar la imagen de tu negocio y multiplicar tus ventas. Nuestro objetivo es ayudarte a destacar en internet con páginas web y redes sociales atractivas y efectivas.</p>
+        <p>Una buena presencia online puede aumentar clientes, mejorar la imagen de tu negocio y multiplicar tus ventas.</p>
     </header>
 
     <nav>
@@ -222,24 +209,33 @@
 
     <section id="servicios">
         <h2>¿Qué ofrezco?</h2>
-        <p>Ayudo a negocios a tener una presencia online efectiva, atrayendo más clientes y mejorando su imagen digital. Tener una página web y redes sociales bien configuradas puede:</p>
-        <ul>
-            <li>✅ Incrementar la visibilidad de tu negocio frente a nuevos clientes.</li>
-            <li>✅ Facilitar la comunicación con tus clientes a través de contacto online.</li>
-            <li>✅ Aumentar ventas mostrando tus productos y servicios de manera profesional.</li>
-            <li>✅ Construir confianza y credibilidad en tu marca.</li>
-        </ul>
+        <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
+
+        <div class="servicio-cards">
+            <div class="card">
+                <h3>🌐 Página Web Profesional</h3>
+                <p>Diseño moderno, adaptable a móviles y optimizado para mostrar lo mejor de tu negocio.</p>
+            </div>
+            <div class="card">
+                <h3>💡 Asesoramiento</h3>
+                <p>Te guiamos paso a paso en el uso de tus nuevas herramientas digitales y resolvemos tus dudas.</p>
+            </div>
+            <div class="card">
+                <h3>📱 Redes Sociales</h3>
+                <p>Configuramos y diseñamos tus perfiles en redes sociales para aumentar tu visibilidad y atraer clientes.</p>
+            </div>
+        </div>
     </section>
 
     <section id="precios">
         <h2>Precios</h2>
         <div class="precio">
             <h3>🌐 Página web básica – <strong>50€</strong></h3>
-            <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. <strong>Precio negociable según tus necesidades.</strong></p>
+            <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. Precio negociable según tus necesidades.</p>
         </div>
         <div class="precio">
             <h3>📱 Redes sociales + Página web – <strong>75€</strong></h3>
-            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. <strong>Precio negociable</strong> si se combina con otros servicios.</p>
+            <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
         </div>
     </section>
 
@@ -250,25 +246,25 @@
             <li>🕒 Horarios de apertura</li>
             <li>📍 Dirección o zona</li>
             <li>📞 Contacto (teléfono, email...)</li>
-            <li>🛍 Lista de productos/servicios con precios</li>
-            <li>📷 Fotografías si quieres incluirlas</li>
+            <li>🛍 Lista de productos/servicios</li>
+            <li>📷 Fotografías (opcional)</li>
         </ul>
     </section>
 
     <section id="porque">
         <h2>¿Por qué elegirnos?</h2>
         <ul>
-            <li>🚀 <strong>Experiencia personalizada</strong>: cada proyecto es único y adaptado a tu negocio.</li>
-            <li>🎨 <strong>Diseños modernos y atractivos</strong>: que captan la atención de tus clientes.</li>
-            <li>💡 <strong>Acompañamiento y asesoramiento</strong>: no solo creamos tu web, te enseñamos a usarla.</li>
-            <li>📈 <strong>Enfoque en resultados</strong>: nuestro objetivo es que consigas más clientes y más ventas.</li>
-            <li>🔒 <strong>Confianza y seguridad</strong>: trabajamos de manera transparente, con precios claros y ajustados.</li>
+            <li>🚀 Experiencia personalizada adaptada a tu negocio.</li>
+            <li>🎨 Diseños modernos y atractivos que llaman la atención.</li>
+            <li>💡 Te acompañamos con asesoramiento digital.</li>
+            <li>📈 Enfoque en resultados: más clientes y ventas.</li>
+            <li>🔒 Confianza y precios claros sin sorpresas.</li>
         </ul>
     </section>
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada para empezar a crecer online.</p>
+        <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbenos</a>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">🚀 Solicita tu web hoy</a>
     </section>
@@ -288,13 +284,11 @@
             });
         }, { threshold: 0.2 });
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
+        sections.forEach(section => observer.observe(section));
     </script>
-
 </body>
 </html>
+
 
 
 
