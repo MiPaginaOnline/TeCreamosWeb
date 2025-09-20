@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -30,11 +31,23 @@
             animation: fadeIn 2s ease-in;
         }
 
+        /* Header con imagen de fondo */
         header {
+            position: relative;
             color: white;
-            padding: 60px 20px;
             text-align: center;
             font-family: 'Fredoka One', cursive;
+            padding: 100px 20px;
+            background: url('https://images.unsplash.com/photo-1581091215369-1b18d7c1f13b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            border-bottom: 6px solid #00aaff;
+        }
+
+        .header-overlay {
+            background-color: rgba(0, 0, 0, 0.55);
+            padding: 60px 20px;
+            border-radius: 12px;
+            display: inline-block;
+            max-width: 900px;
         }
 
         header h1 {
@@ -192,8 +205,10 @@
 <body>
 
     <header>
-        <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
-        <p>Una buena presencia online puede aumentar clientes, mejorar la imagen de tu negocio y multiplicar tus ventas.</p>
+        <div class="header-overlay">
+            <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
+            <p>Una buena presencia online puede aumentar clientes, mejorar la imagen de tu negocio y multiplicar tus ventas.</p>
+        </div>
     </header>
 
     <nav>
@@ -288,6 +303,7 @@
     </script>
 </body>
 </html>
+
 
 
 
