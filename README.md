@@ -168,6 +168,7 @@
             .boton-contacto { display: block; width: 100%; text-align: center; }
         }
     </style>
+    <meta name="google-site-verification" content="google5fa4a0e4e13f9069" />
 </head>
 <body>
     <header>
