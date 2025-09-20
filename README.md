@@ -14,7 +14,7 @@
     <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         @keyframes fadeIn {
@@ -54,6 +54,11 @@
             color: #cccccc;
         }
 
+        header p span.resaltar {
+            color: #ffffff; /* Resalta más blanco */
+            font-weight: 600;
+        }
+
         /* Sticky flotante */
         nav {
             position: fixed;
@@ -83,6 +88,7 @@
 
         nav a:hover { background-color: rgba(255, 255, 255, 0.1); }
 
+        /* Logo con fuente original */
         .logo {
             margin-right: 20px;
             font-family: 'Fredoka One', cursive;
@@ -207,7 +213,7 @@
 
     <header>
         <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
-        <p>Una buena presencia online puede aumentar clientes, mejorar la imagen de tu negocio y multiplicar tus ventas.</p>
+        <p>Una buena presencia online puede <span class="resaltar">aumentar clientes</span>, mejorar la imagen de tu negocio y <span class="resaltar">multiplicar tus ventas</span>.</p>
     </header>
 
     <nav>
@@ -235,7 +241,7 @@
                 <h3>💡 Asesoramiento</h3>
                 <p>Te guiamos paso a paso en el uso de tus nuevas herramientas digitales y resolvemos tus dudas.</p>
                 <!-- Imagen pequeña debajo de Asesoramiento -->
-                <img src="https://images.unsplash.com/photo-1581091215369-1b18d7c1f13b?auto=format&fit=crop&w=600&q=80" 
+                <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44315b?auto=format&fit=crop&w=600&q=80" 
                      alt="Asesoramiento digital" class="servicio-img">
             </div>
             <div class="card">
@@ -252,7 +258,7 @@
             <li>🚀 Experiencia personalizada adaptada a tu negocio.</li>
             <li>🎨 Diseños modernos y atractivos que llaman la atención.</li>
             <li>💡 Te acompañamos con asesoramiento digital.</li>
-            <li>📈 Resultados rápidos y eficientes: entregamos la página funcional en un plazo aproximado de 24 horas.</li>
+            <li>📈 Entregamos la página funcional en un plazo aproximado de 24 horas, asegurando eficiencia y rapidez.</li>
             <li>🔒 Confianza y precios claros sin sorpresas.</li>
         </ul>
     </section>
@@ -311,6 +317,7 @@
     </script>
 </body>
 </html>
+
 
 
 
