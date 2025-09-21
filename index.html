@@ -173,25 +173,18 @@
         }
 
         @media (max-width: 600px) {
-            body {
-                display: flex;
-                flex-direction: column;
-            }
-            header { order: 2; }  /* se mueve debajo */
-            #servicios { order: 1; } /* se muestra primero */
-
             header {
-                padding: 100px 20px 30px 20px; /* más espacio arriba para no tapar el título */
+                padding: 40px 20px 20px 20px; /* reducido para que quepa más contenido en pantalla */
             }
             section:first-of-type {
-                margin-top: 10px;
+                margin-top: 20px;
             }
             section {
-                margin: 40px auto 20px auto;
-                padding: 25px 15px;
+                margin: 30px auto 20px auto;
+                padding: 20px 15px;
             }
-            header h1 { font-size: 1.5em; }
-            header p { font-size: 1em; }
+            header h1 { font-size: 1.4em; line-height: 1.3; }
+            header p { font-size: 0.95em; }
             .servicio-cards { grid-template-columns: 1fr; }
             .boton-contacto { display: block; width: 100%; text-align: center; }
         }
@@ -325,4 +318,3 @@
     </script>
 </body>
 </html>
-
