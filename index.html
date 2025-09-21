@@ -173,6 +173,13 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            header { order: 2; }  /* se mueve debajo */
+            #servicios { order: 1; } /* se muestra primero */
+
             header {
                 padding: 100px 20px 30px 20px; /* más espacio arriba para no tapar el título */
             }
@@ -318,3 +325,4 @@
     </script>
 </body>
 </html>
+
