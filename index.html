@@ -26,7 +26,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 100px; /* espacio para la nav sticky */
             background: radial-gradient(circle at top left, rgba(0, 100, 200, 0.15), transparent 60%), #000000;
             color: #e0e0e0;
             animation: fadeIn 2s ease-in;
@@ -173,8 +173,11 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding-top: 80px; /* espacio para nav */
+            }
             header {
-                padding: 40px 20px 20px 20px; /* reducido para que quepa más contenido en pantalla */
+                padding: 40px 20px 20px 20px; /* reduce padding para que quepa más contenido */
             }
             section:first-of-type {
                 margin-top: 20px;
@@ -318,3 +321,4 @@
     </script>
 </body>
 </html>
+
