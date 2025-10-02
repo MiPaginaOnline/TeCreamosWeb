@@ -194,6 +194,10 @@
             .servicio-cards { grid-template-columns: 1fr; }
             .boton-contacto { display: block; width: 100%; text-align: center; }
         }
+        navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('open');
     </style>
 </head>
 <body>
