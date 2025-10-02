@@ -307,22 +307,37 @@
     <footer>
         <p>&copy; 2025 TeCreamosWeb – info.tecreamosweb@gmail.com</p>
     </footer>
-
+    
     <script>
-        // Scroll animations
-        const sections = document.querySelectorAll("section");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add("visible");
-            });
-        }, { threshold: 0.2 });
-        sections.forEach(section => observer.observe(section));
+<script>
+    // Animación de secciones al hacer scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
 
-        // Hamburger menu toggle
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-    </script>
+    // Seleccionamos la hamburguesa y los enlaces del menú
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    // Alternar menú al hacer clic en la hamburguesa
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');      // Muestra u oculta el menú
+        hamburger.classList.toggle('open');       // Animación de X
+    });
+
+    // Cerrar menú al hacer clic en cualquier enlace
+    navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');  // Oculta el menú
+            hamburger.classList.remove('open');   // Vuelve la hamburguesa original
+        });
+    });
+ </script>
 </body>
 </html>
 
