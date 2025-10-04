@@ -1,23 +1,19 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeCreamosWeb+</title>
 
-    <meta name="google-site-verification" content="zcqWNXO5PxwuhC8eUUWnLJH8WTvc4ASWszyT6URT9AM" />
-
     <!-- SEO -->
     <meta name="description" content="TeCreamosWeb diseña páginas web profesionales, redes sociales y asesoramiento digital para que tu negocio crezca online.">
     <meta name="keywords" content="páginas web, diseño web, redes sociales, asesoramiento digital, marketing online">
     <meta name="author" content="TeCreamosWeb">
 
-    <!-- Favicon para Google Search -->
-    <link rel="icon" href="ChatGPT Image 20 sept 2025, 21_04_08.png" sizes="32x32" type="image/png">
-
     <!-- Favicon -->
-    <link rel="icon" href="ChatGPT Image 20 sept 2025, 21_04_08.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts optimizado -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -37,7 +33,6 @@
 
         header {
             text-align: center;
-            font-family: 'Poppins', sans-serif;
             font-weight: 700;
             padding: 100px 20px 60px 20px;
         }
@@ -95,6 +90,9 @@
             margin: 4px 0;
             transition: 0.4s;
         }
+        .hamburger.open div:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.open div:nth-child(2) { opacity: 0; }
+        .hamburger.open div:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
         /* Secciones */
         section {
@@ -180,7 +178,7 @@
                 padding-top: 80px; /* espacio para nav */
             }
             header {
-                padding: 40px 20px 20px 20px; /* reduce padding para que quepa más contenido */
+                padding: 40px 20px 20px 20px;
             }
             section:first-of-type {
                 margin-top: 20px;
@@ -197,13 +195,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
-        <p>Una buena presencia online puede <span class="resaltar">aumentar clientes</span>, mejorar la imagen de tu negocio y <span class="resaltar">multiplicar tus ventas</span>.</p>
-    </header>
-<body>
-    
-    <nav>
+    <nav aria-label="Menú principal">
         <div class="logo">
             <span>Te</span><span>Creamos</span><span>Web+</span>
         </div>
@@ -215,18 +207,22 @@
             <a href="#requisitos">Información requerida</a>
             <a href="#contacto">Contacto</a>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
+        <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0">
             <div></div>
             <div></div>
             <div></div>
         </div>
     </nav>
 
+    <header>
+        <h1>Te Hacemos Tu Propia Página Web, Personalizamos Tus Redes Sociales y Te Ayudamos a Llevar Tu Negocio a Lo Más Alto</h1>
+        <p>Una buena presencia online puede <span class="resaltar">aumentar clientes</span>, mejorar la imagen de tu negocio y <span class="resaltar">multiplicar tus ventas</span>.</p>
+    </header>
+
     <!-- 1. Qué ofrecemos -->
     <section id="servicios">
         <h2>¿Qué ofrecemos?</h2>
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
-
         <div class="servicio-cards">
             <div class="card">
                 <h3>🌐 Página Web</h3>
@@ -250,7 +246,7 @@
             <li>🚀 Experiencia personalizada adaptada a tu negocio.</li>
             <li>🎨 Diseños modernos y atractivos que llaman la atención.</li>
             <li>💡 Te acompañamos con asesoramiento digital.</li>
-            <li>📈 Entregamos la página funcional en un plazo aproximado de 1 semana, asegurando eficiencia y rapidez.</li>
+            <li>📈 Entregamos la página funcional en un plazo aproximado de 1 semana.</li>
             <li>🔒 Confianza y precios claros sin sorpresas.</li>
         </ul>
     </section>
@@ -260,12 +256,11 @@
         <h2>Proceso de Entrega y Garantía de Satisfacción</h2>
         <p>En <strong>TeCreamosWeb+</strong> implementamos un enfoque transparente y orientado a resultados:</p>
         <ul>
-            <li>💻 <strong>Desarrollo Inicial:</strong> Creamos tu página web con diseño profesional, funcionalidades optimizadas y experiencia de usuario mejorada.</li>
-            <li>📤 <strong>Entrega para Revisión:</strong> Te enviamos la página web completa para que la evalúes en un entorno de prueba.</li>
-            <li>✅ <strong>Satisfacción Garantizada:</strong> Si la web cumple con tus expectativas, realizas el pago y la página se activa definitivamente.</li>
-            <li>❌ <strong>No Aprobada:</strong> Si no estás satisfecho, no realizas ningún pago y eliminaremos la página web sin compromiso.</li>
+            <li>💻 <strong>Desarrollo Inicial:</strong> Creamos tu página web con diseño profesional.</li>
+            <li>📤 <strong>Entrega para Revisión:</strong> Te enviamos la web completa en un entorno de prueba.</li>
+            <li>✅ <strong>Satisfacción Garantizada:</strong> Solo pagas si quedas conforme.</li>
+            <li>❌ <strong>No Aprobada:</strong> Si no te convence, no pagas y eliminamos la web.</li>
         </ul>
-        <p>Este modelo asegura que solo pagues por un producto que realmente te guste y funcione para tu negocio.</p>
     </section>
 
     <!-- 4. Precios -->
@@ -284,12 +279,12 @@
     <!-- 5. Información requerida -->
     <section id="requisitos">
         <h2>Información requerida</h2>
-        <p>Para poder desarrollar una presencia digital completa y efectiva para tu negocio, necesitamos algunos datos fundamentales:</p>
+        <p>Para desarrollar una presencia digital efectiva, necesitamos algunos datos fundamentales:</p>
         <ul>
             <li>📋 Nombre del negocio</li>
             <li>🕒 Horarios de atención</li>
             <li>📍 Dirección o zona de operación</li>
-            <li>📞 Información de contacto (teléfono, email, etc.)</li>
+            <li>📞 Información de contacto</li>
             <li>🛍 Lista de productos o servicios ofrecidos</li>
             <li>📷 Fotografías de productos, servicios o instalaciones (opcional)</li>
         </ul>
@@ -299,7 +294,6 @@
     <section id="contacto">
         <h2>Contacto</h2>
         <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
-        info.tecreamosweb@gmail.com
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">📩 Escríbenos</a>
         <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto">🚀 Solicita tu web hoy</a>
     </section>
@@ -307,7 +301,7 @@
     <footer>
         <p>&copy; 2025 TeCreamosWeb – info.tecreamosweb@gmail.com</p>
     </footer>
-    
+
     <script>
     // Animación de secciones al hacer scroll
     const sections = document.querySelectorAll("section");
@@ -318,25 +312,22 @@
     }, { threshold: 0.2 });
     sections.forEach(section => observer.observe(section));
 
-    // Seleccionamos la hamburguesa y los enlaces del menú
+    // Menú hamburguesa
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links a');
 
-    // Alternar menú al hacer clic en la hamburguesa
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');      // Muestra u oculta el menú
-        hamburger.classList.toggle('open');       // Animación de X
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
     });
 
-    // Cerrar menú al hacer clic en cualquier enlace
     navItems.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');  // Oculta el menú
-            hamburger.classList.remove('open');   // Vuelve la hamburguesa original
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('open');
         });
     });
-  </script>
+    </script>
 </body>
 </html>
-
