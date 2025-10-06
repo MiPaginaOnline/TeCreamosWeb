@@ -504,19 +504,19 @@
             text-decoration: underline;
         }
 
-        /* Botón WhatsApp flotante */
-        .whatsapp-float {
+        /* Botón Email flotante */
+        .email-float {
             position: fixed;
             bottom: 25px;
             right: 25px;
             width: 60px;
             height: 60px;
-            background: #25D366;
+            background: linear-gradient(135deg, #D44638, #EA4335);
             color: white;
             border-radius: 50%;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            font-size: 28px;
+            box-shadow: 0 4px 20px rgba(234, 67, 53, 0.5);
             z-index: 100;
             display: flex;
             align-items: center;
@@ -525,9 +525,33 @@
             animation: float 3s ease-in-out infinite;
         }
 
-        .whatsapp-float:hover {
+        .email-float:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+            box-shadow: 0 6px 25px rgba(234, 67, 53, 0.7);
+        }
+
+        /* Tooltip para el botón de email */
+        .email-tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: var(--dark-bg);
+            color: var(--lighter-text);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.8em;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: var(--transition);
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .email-float:hover .email-tooltip {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Responsive mejorado */
@@ -580,6 +604,10 @@
             section {
                 padding: 30px 20px;
             }
+            
+            .email-tooltip {
+                display: none; /* Ocultar tooltip en móviles */
+            }
         }
 
         @media (max-width: 600px) {
@@ -629,10 +657,10 @@
                 font-size: 1em;
             }
 
-            .whatsapp-float {
+            .email-float {
                 width: 50px;
                 height: 50px;
-                font-size: 25px;
+                font-size: 24px;
                 bottom: 20px;
                 right: 20px;
             }
@@ -664,9 +692,10 @@
         </button>
     </nav>
 
-    <!-- Botón WhatsApp flotante -->
-    <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20sus%20servicios" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <!-- Botón Email flotante -->
+    <a href="mailto:tecreamosweb@gmail.com?subject=Consulta%20sobre%20servicios%20web&body=Hola,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20recibir%20más%20información." class="email-float" aria-label="Enviar correo electrónico a TeCreamosWeb">
+        <i class="fas fa-envelope"></i>
+        <div class="email-tooltip">Escríbenos un email</div>
     </a>
 
     <!-- Sección "Han confiado en nosotros" -->
@@ -762,13 +791,12 @@
     <section id="contacto">
         <h2>Contacto</h2>
         <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
-        <p><a href="mailto:info.tecreamosweb@gmail.com" aria-label="Enviar correo a TeCreamosWeb">info.tecreamosweb@gmail.com</a></p>
-        <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto"><i class="fas fa-envelope"></i> Escríbenos</a>
-        <a href="mailto:info.tecreamosweb@gmail.com" class="boton-contacto"><i class="fas fa-rocket"></i> Solicita tu web hoy</a>
+        <a href="mailto:tecreamosweb@gmail.com" class="boton-contacto"><i class="fas fa-envelope"></i> Escríbenos</a>
+        <a href="mailto:tecreamosweb@gmail.com" class="boton-contacto"><i class="fas fa-rocket"></i> Solicita tu web hoy</a>
     </section>
 
     <footer role="contentinfo">
-        <p>&copy; 2025 TeCreamosWeb – <a href="mailto:info.tecreamosweb@gmail.com">info.tecreamosweb@gmail.com</a></p>
+        <p>&copy; 2025 TeCreamosWeb – <a href="mailto:tecreamosweb@gmail.com">tecreamosweb@gmail.com</a></p>
     </footer>
     
     <script>
