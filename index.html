@@ -26,25 +26,24 @@
         }
 
         /* ✅ Estilo sección "Han confiado en nosotros" */
-       .trusted-section {
-           text-align: center;
-           margin: 40px auto;
-           padding: 20px 0;
+      .trusted-container {
+            text-align: center;
+            margin: 30px 0 10px 0;
        }
 
        .trusted-title {
-           font-size: 1.3em;
-           color: #bfbfbf;
-           margin-bottom: 30px;
-           font-weight: 400;
+            font-size: 1.2em;
+            color: #bfbfbf;
+            margin-bottom: 25px;
+            font-weight: 400;
        }
 
        .trusted-logos {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
             gap: 60px;
+            flex-wrap: wrap;
        }
 
        .trusted-item {
@@ -55,12 +54,12 @@
             letter-spacing: 1px;
             opacity: 0.9;
             transition: opacity 0.3s ease;
-        }
+       }
 
        .trusted-item:hover {
             opacity: 0.6;
         }
-
+        
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -257,13 +256,13 @@
     </nav>
 
     <!-- ✅ NUEVA SECCIÓN AÑADIDA AQUÍ -->
-<section class="trusted-section">
-    <h2 class="trusted-title">Han confiado en nosotros:</h2>
+<div class="trusted-container">
+    <p class="trusted-title"><strong>Han confiado en nosotros:</strong></p>
     <div class="trusted-logos">
         <a href="https://mipaginaonline.github.io/PrimCoin/" class="trusted-item">PRIMCOIN</a>
         <a href="https://mipaginaonline.github.io/RestaurantLesGuatlles/" class="trusted-item">Les Guatlles</a>
     </div>
-</section>
+</div>
 
     <!-- 1. Qué ofrecemos -->
     <section id="servicios">
