@@ -554,6 +554,188 @@
             transform: translateY(0);
         }
 
+        /* Asistente de IA */
+        .assistant-container {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 100;
+        }
+
+        .assistant-toggle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 170, 255, 0.5);
+            transition: var(--transition);
+            animation: float 3s ease-in-out infinite;
+            border: none;
+        }
+
+        .assistant-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 170, 255, 0.7);
+        }
+
+        .assistant-window {
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            width: 350px;
+            max-width: 90vw;
+            background: var(--dark-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .assistant-window.active {
+            display: flex;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .assistant-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            padding: 15px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .assistant-header h3 {
+            margin: 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .assistant-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .assistant-close:hover {
+            transform: scale(1.2);
+        }
+
+        .assistant-messages {
+            flex: 1;
+            padding: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            padding: 12px 15px;
+            border-radius: 18px;
+            max-width: 85%;
+            line-height: 1.4;
+            font-size: 0.9em;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            background: var(--primary-color);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.assistant {
+            align-self: flex-start;
+            background: var(--card-bg);
+            color: var(--light-text);
+            border-bottom-left-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .assistant-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--darker-bg);
+        }
+
+        .assistant-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 20px;
+            background: var(--card-bg);
+            color: var(--light-text);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9em;
+            outline: none;
+        }
+
+        .assistant-input input::placeholder {
+            color: var(--gray-text);
+        }
+
+        .assistant-send {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .assistant-send:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .suggested-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 20px 20px;
+        }
+
+        .suggested-question {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-text);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: left;
+        }
+
+        .suggested-question:hover {
+            background: rgba(0, 170, 255, 0.2);
+            transform: translateX(5px);
+        }
+
         /* Responsive mejorado */
         @media (max-width: 768px) {
             .nav-links { 
@@ -607,6 +789,16 @@
             
             .email-tooltip {
                 display: none; /* Ocultar tooltip en móviles */
+            }
+
+            .assistant-container {
+                bottom: 90px;
+                left: 20px;
+            }
+
+            .assistant-window {
+                width: calc(100vw - 40px);
+                left: 0;
             }
         }
 
@@ -664,6 +856,12 @@
                 bottom: 20px;
                 right: 20px;
             }
+
+            .assistant-toggle {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -691,6 +889,38 @@
             <div></div>
         </button>
     </nav>
+
+    <!-- Asistente de IA -->
+    <div class="assistant-container">
+        <button class="assistant-toggle" aria-label="Abrir asistente de IA">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="assistant-window">
+            <div class="assistant-header">
+                <h3><i class="fas fa-robot"></i> Asistente TeCreamosWeb+</h3>
+                <button class="assistant-close" aria-label="Cerrar asistente">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="assistant-messages">
+                <div class="message assistant">
+                    ¡Hola! Soy tu asistente de TeCreamosWeb+. ¿En qué puedo ayudarte? Puedes preguntarme sobre nuestros servicios, precios o proceso de trabajo.
+                </div>
+                <div class="suggested-questions">
+                    <button class="suggested-question" data-question="¿Qué servicios ofrecen?">¿Qué servicios ofrecen?</button>
+                    <button class="suggested-question" data-question="¿Cuánto cuesta una página web?">¿Cuánto cuesta una página web?</button>
+                    <button class="suggested-question" data-question="¿Cuánto tiempo tardan en crear una web?">¿Cuánto tiempo tardan en crear una web?</button>
+                    <button class="suggested-question" data-question="¿Qué información necesitan para crear mi web?">¿Qué información necesitan para crear mi web?</button>
+                </div>
+            </div>
+            <div class="assistant-input">
+                <input type="text" placeholder="Escribe tu pregunta..." aria-label="Escribe tu pregunta para el asistente">
+                <button class="assistant-send" aria-label="Enviar mensaje">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Botón Email flotante -->
     <a href="mailto:tecreamosweb@gmail.com?subject=Consulta%20sobre%20servicios%20web&body=Hola,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20recibir%20más%20información." class="email-float" aria-label="Enviar correo electrónico a TeCreamosWeb">
@@ -855,6 +1085,122 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+
+        // Asistente de IA
+        const assistantToggle = document.querySelector('.assistant-toggle');
+        const assistantWindow = document.querySelector('.assistant-window');
+        const assistantClose = document.querySelector('.assistant-close');
+        const assistantInput = document.querySelector('.assistant-input input');
+        const assistantSend = document.querySelector('.assistant-send');
+        const assistantMessages = document.querySelector('.assistant-messages');
+        const suggestedQuestions = document.querySelectorAll('.suggested-question');
+
+        // Base de conocimiento del asistente
+        const knowledgeBase = {
+            "servicios": {
+                "preguntas": ["servicios", "qué ofrecen", "qué hacen", "qué ofreces", "qué haces"],
+                "respuesta": "Ofrecemos tres servicios principales:<br><br><strong>1. Página Web (150€)</strong>: Diseño moderno, adaptable a móviles y optimizado para mostrar lo mejor de tu negocio.<br><br><strong>2. Redes Sociales + Página Web (200€)</strong>: Configuración y diseño inicial de perfiles en redes sociales junto con tu página web.<br><br><strong>3. Redes Sociales + Página Web + Consejos (210€)</strong>: Todo lo anterior más consejos sobre contenido para redes sociales para aumentar tus ventas."
+            },
+            "precios": {
+                "preguntas": ["precios", "cuánto cuesta", "coste", "precio", "tarifas"],
+                "respuesta": "Nuestros precios son:<br><br><strong>• Página web:</strong> 150€ (negociable según necesidades)<br><strong>• Redes sociales + Página web:</strong> 200€ (negociable)<br><strong>• Redes sociales + Página web + Consejos:</strong> 210€<br><br>Todos los precios son negociables según tus necesidades específicas."
+            },
+            "tiempo": {
+                "preguntas": ["tiempo", "cuánto tardan", "plazo", "entrega", "cuándo estará lista"],
+                "respuesta": "Entregamos la página web funcional en un plazo aproximado de <strong>1 semana</strong>, asegurando eficiencia y rapidez."
+            },
+            "proceso": {
+                "preguntas": ["proceso", "cómo trabajan", "metodología", "cómo es el proceso", "garantía"],
+                "respuesta": "Nuestro proceso es transparente:<br><br>1. <strong>Desarrollo inicial</strong>: Creamos tu página web<br>2. <strong>Entrega para revisión</strong>: Te enviamos la web para que la evalúes<br>3. <strong>Satisfacción garantizada</strong>: Solo pagas si estás satisfecho con el resultado<br>4. <strong>No aprobada</strong>: Si no te gusta, no pagas nada"
+            },
+            "informacion": {
+                "preguntas": ["información", "qué necesitan", "datos", "requisitos", "qué debo proporcionar"],
+                "respuesta": "Para crear tu web necesitamos:<br><br>• Nombre del negocio<br>• Horarios de atención<br>• Dirección o zona de operación<br>• Información de contacto (teléfono, email)<br>• Lista de productos o servicios<br>• Fotografías (opcional)"
+            },
+            "contacto": {
+                "preguntas": ["contacto", "cómo contactar", "email", "teléfono", "escribir"],
+                "respuesta": "Puedes contactarnos por email: <strong>tecreamosweb@gmail.com</strong><br><br>También puedes usar el botón de email en la parte inferior derecha de la página para escribirnos directamente."
+            },
+            "porque": {
+                "preguntas": ["por qué elegirnos", "ventajas", "beneficios", "por qué ustedes"],
+                "respuesta": "Nos elegir porque:<br><br>• Experiencia personalizada adaptada a tu negocio<br>• Diseños modernos y atractivos<br>• Te acompañamos con asesoramiento digital<br>• Entrega rápida (aprox. 1 semana)<br>• Confianza y precios claros sin sorpresas"
+            },
+            "default": {
+                "respuesta": "Lo siento, no tengo información específica sobre eso. Puedes preguntarme sobre nuestros servicios, precios, proceso de trabajo o información requerida. Si necesitas más detalles, te recomiendo contactarnos directamente por email: tecreamosweb@gmail.com"
+            }
+        };
+
+        // Función para encontrar la respuesta adecuada
+        function findAnswer(question) {
+            const lowerQuestion = question.toLowerCase();
+            
+            for (const category in knowledgeBase) {
+                if (category === "default") continue;
+                
+                for (const keyword of knowledgeBase[category].preguntas) {
+                    if (lowerQuestion.includes(keyword)) {
+                        return knowledgeBase[category].respuesta;
+                    }
+                }
+            }
+            
+            return knowledgeBase.default.respuesta;
+        }
+
+        // Función para agregar mensaje al chat
+        function addMessage(text, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
+            messageDiv.innerHTML = text;
+            assistantMessages.appendChild(messageDiv);
+            assistantMessages.scrollTop = assistantMessages.scrollHeight;
+        }
+
+        // Función para procesar pregunta
+        function processQuestion(question) {
+            addMessage(question, true);
+            
+            // Simular tiempo de procesamiento
+            setTimeout(() => {
+                const answer = findAnswer(question);
+                addMessage(answer);
+            }, 1000);
+        }
+
+        // Event listeners para el asistente
+        assistantToggle.addEventListener('click', () => {
+            assistantWindow.classList.toggle('active');
+        });
+
+        assistantClose.addEventListener('click', () => {
+            assistantWindow.classList.remove('active');
+        });
+
+        assistantSend.addEventListener('click', () => {
+            const question = assistantInput.value.trim();
+            if (question) {
+                processQuestion(question);
+                assistantInput.value = '';
+            }
+        });
+
+        assistantInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const question = assistantInput.value.trim();
+                if (question) {
+                    processQuestion(question);
+                    assistantInput.value = '';
+                }
+            }
+        });
+
+        // Preguntas sugeridas
+        suggestedQuestions.forEach(button => {
+            button.addEventListener('click', () => {
+                const question = button.getAttribute('data-question');
+                processQuestion(question);
             });
         });
     </script>
