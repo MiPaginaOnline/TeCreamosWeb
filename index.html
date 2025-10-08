@@ -504,61 +504,11 @@
             text-decoration: underline;
         }
 
-        /* Botón Email flotante */
-        .email-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #D44638, #EA4335);
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 28px;
-            box-shadow: 0 4px 20px rgba(234, 67, 53, 0.5);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .email-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(234, 67, 53, 0.7);
-        }
-
-        /* Tooltip para el botón de email */
-        .email-tooltip {
-            position: absolute;
-            bottom: 70px;
-            right: 0;
-            background: var(--dark-bg);
-            color: var(--lighter-text);
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 0.8em;
-            white-space: nowrap;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: var(--transition);
-            pointer-events: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .email-float:hover .email-tooltip {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Asistente de IA */
+        /* Asistente de IA (en lugar del botón de email) */
         .assistant-container {
             position: fixed;
             bottom: 25px;
-            left: 25px;
+            right: 25px;
             z-index: 100;
         }
 
@@ -587,7 +537,7 @@
         .assistant-window {
             position: absolute;
             bottom: 80px;
-            left: 0;
+            right: 0;
             width: 350px;
             max-width: 90vw;
             background: var(--dark-bg);
@@ -736,6 +686,30 @@
             transform: translateX(5px);
         }
 
+        /* Tooltip para el asistente */
+        .assistant-tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: var(--dark-bg);
+            color: var(--lighter-text);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.8em;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: var(--transition);
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .assistant-toggle:hover .assistant-tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Responsive mejorado */
         @media (max-width: 768px) {
             .nav-links { 
@@ -787,18 +761,18 @@
                 padding: 30px 20px;
             }
             
-            .email-tooltip {
+            .assistant-tooltip {
                 display: none; /* Ocultar tooltip en móviles */
             }
 
             .assistant-container {
-                bottom: 90px;
-                left: 20px;
+                bottom: 25px;
+                right: 20px;
             }
 
             .assistant-window {
                 width: calc(100vw - 40px);
-                left: 0;
+                right: 0;
             }
         }
 
@@ -849,14 +823,6 @@
                 font-size: 1em;
             }
 
-            .email-float {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                bottom: 20px;
-                right: 20px;
-            }
-
             .assistant-toggle {
                 width: 50px;
                 height: 50px;
@@ -890,10 +856,11 @@
         </button>
     </nav>
 
-    <!-- Asistente de IA -->
+    <!-- Asistente de IA (en lugar del botón de email) -->
     <div class="assistant-container">
         <button class="assistant-toggle" aria-label="Abrir asistente de IA">
             <i class="fas fa-robot"></i>
+            <div class="assistant-tooltip">Asistente de IA</div>
         </button>
         <div class="assistant-window">
             <div class="assistant-header">
@@ -921,12 +888,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Botón Email flotante -->
-    <a href="mailto:tecreamosweb@gmail.com?subject=Consulta%20sobre%20servicios%20web&body=Hola,%20estoy%20interesado%20en%20sus%20servicios%20y%20me%20gustaría%20recibir%20más%20información." class="email-float" aria-label="Enviar correo electrónico a TeCreamosWeb">
-        <i class="fas fa-envelope"></i>
-        <div class="email-tooltip">Escríbenos un email</div>
-    </a>
 
     <!-- Sección "Han confiado en nosotros" -->
     <div class="trusted-container">
@@ -1121,11 +1082,11 @@
             },
             "contacto": {
                 "preguntas": ["contacto", "cómo contactar", "email", "teléfono", "escribir"],
-                "respuesta": "Puedes contactarnos por email: <strong>tecreamosweb@gmail.com</strong><br><br>También puedes usar el botón de email en la parte inferior derecha de la página para escribirnos directamente."
+                "respuesta": "Puedes contactarnos por email: <strong>tecreamosweb@gmail.com</strong><br><br>También puedes usar los botones de contacto en la sección correspondiente de nuestra página."
             },
             "porque": {
                 "preguntas": ["por qué elegirnos", "ventajas", "beneficios", "por qué ustedes"],
-                "respuesta": "Nos elegir porque:<br><br>• Experiencia personalizada adaptada a tu negocio<br>• Diseños modernos y atractivos<br>• Te acompañamos con asesoramiento digital<br>• Entrega rápida (aprox. 1 semana)<br>• Confianza y precios claros sin sorpresas"
+                "respuesta": "Nos eligen porque:<br><br>• Experiencia personalizada adaptada a tu negocio<br>• Diseños modernos y atractivos<br>• Te acompañamos con asesoramiento digital<br>• Entrega rápida (aprox. 1 semana)<br>• Confianza y precios claros sin sorpresas"
             },
             "default": {
                 "respuesta": "Lo siento, no tengo información específica sobre eso. Puedes preguntarme sobre nuestros servicios, precios, proceso de trabajo o información requerida. Si necesitas más detalles, te recomiendo contactarnos directamente por email: tecreamosweb@gmail.com"
