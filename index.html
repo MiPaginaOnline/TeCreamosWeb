@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeCreamosWeb+</title>
-
     <meta name="google-site-verification" content="zcqWNXO5PxwuhC8eUUWnLJH8WTvc4ASWszyT6URT9AM" />
-
     <!-- SEO -->
     <meta name="description" content="TeCreamosWeb diseña páginas web profesionales, redes sociales y asesoramiento digital para que tu negocio crezca online.">
     <meta name="keywords" content="páginas web, diseño web, redes sociales, asesoramiento digital, marketing online">
     <meta name="author" content="TeCreamosWeb">
-
     <!-- Favicon -->
     <link rel="icon" href="ChatGPT Image 20 sept 2025, 21_04_08.png" sizes="32x32" type="image/png">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         :root {
             --primary-color: #00aaff;
@@ -38,36 +32,31 @@
             --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             --transition: all 0.3s ease;
         }
-
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding-top: 100px;
-            background: radial-gradient(circle at top left, rgba(0, 100, 200, 0.15), transparent 60%), 
-                        radial-gradient(circle at bottom right, rgba(255, 204, 0, 0.1), transparent 60%), 
+            background: radial-gradient(circle at top left, rgba(0, 100, 200, 0.15), transparent 60%),
+                        radial-gradient(circle at bottom right, rgba(255, 204, 0, 0.1), transparent 60%),
                         #000000;
             color: var(--light-text);
             line-height: 1.6;
             overflow-x: hidden;
         }
-
         /* Header mejorado */
         header {
             text-align: center;
@@ -77,7 +66,6 @@
             position: relative;
             overflow: hidden;
         }
-
         header::before {
             content: '';
             position: absolute;
@@ -89,10 +77,9 @@
                         radial-gradient(circle at 70% 80%, rgba(255, 204, 0, 0.05), transparent 50%);
             z-index: -1;
         }
-
-        header h1 { 
-            margin: 0; 
-            font-size: 2.5em; 
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
             margin-bottom: 20px;
             background: linear-gradient(135deg, var(--lighter-text), var(--primary-color));
             -webkit-background-clip: text;
@@ -100,24 +87,21 @@
             color: transparent;
             animation: fadeIn 1s ease-out;
         }
-
-        header p { 
-            margin-top: 15px; 
-            font-size: 1.3em; 
-            line-height: 1.6; 
+        header p {
+            margin-top: 15px;
+            font-size: 1.3em;
+            line-height: 1.6;
             color: var(--gray-text);
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             animation: fadeIn 1.5s ease-out;
         }
-
-        header p span.resaltar { 
-            color: var(--lighter-text); 
+        header p span.resaltar {
+            color: var(--lighter-text);
             font-weight: 600;
             position: relative;
         }
-
         header p span.resaltar::after {
             content: '';
             position: absolute;
@@ -127,7 +111,6 @@
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
         }
-
         /* Nav mejorada */
         nav {
             position: fixed;
@@ -148,24 +131,20 @@
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         nav.scrolled {
             top: 10px;
             padding: 10px 20px;
             background-color: rgba(10, 10, 10, 0.95);
         }
-
-        .logo { 
-            font-family: 'Fredoka One', cursive; 
-            font-size: 1.6em; 
-            display: flex; 
-            align-items: center; 
+        .logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.6em;
+            display: flex;
+            align-items: center;
         }
-
         .logo span:first-child { color: var(--primary-color); }
         .logo span:nth-child(2) { color: var(--lighter-text); }
         .logo span:nth-child(3) { color: var(--secondary-color); }
-
         .nav-links { display: flex; }
         .nav-links a {
             color: var(--lighter-text);
@@ -178,7 +157,6 @@
             position: relative;
             font-size: 0.95em;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -190,15 +168,12 @@
             transition: var(--transition);
             transform: translateX(-50%);
         }
-
-        .nav-links a:hover { 
+        .nav-links a:hover {
             color: var(--primary-color);
         }
-
         .nav-links a:hover::after {
             width: 80%;
         }
-
         /* Hamburger icon mejorado */
         .hamburger {
             display: none;
@@ -208,7 +183,6 @@
             border: none;
             padding: 5px;
         }
-
         .hamburger div {
             width: 25px;
             height: 3px;
@@ -217,19 +191,15 @@
             transition: var(--transition);
             border-radius: 2px;
         }
-
         .hamburger.open div:nth-child(1) {
             transform: rotate(-45deg) translate(-5px, 6px);
         }
-
         .hamburger.open div:nth-child(2) {
             opacity: 0;
         }
-
         .hamburger.open div:nth-child(3) {
             transform: rotate(45deg) translate(-5px, -6px);
         }
-
         /* Sección "Han confiado en nosotros" mejorada */
         .trusted-container {
             text-align: center;
@@ -243,14 +213,12 @@
             box-shadow: var(--box-shadow);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         .trusted-title {
             font-size: 1.2em;
             color: var(--gray-text);
             margin-bottom: 25px;
             font-weight: 400;
         }
-
         .trusted-logos {
             display: flex;
             justify-content: center;
@@ -258,7 +226,6 @@
             gap: 60px;
             flex-wrap: wrap;
         }
-
         .trusted-item {
             font-size: 1.1em;
             text-decoration: none;
@@ -272,14 +239,12 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .trusted-item:hover {
             opacity: 1;
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
         /* Secciones mejoradas */
         section {
             max-width: 1000px;
@@ -295,7 +260,6 @@
             position: relative;
             overflow: hidden;
         }
-
         section::before {
             content: '';
             position: absolute;
@@ -305,23 +269,20 @@
             height: 100%;
             background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
         }
-
-        section.visible { 
-            opacity: 1; 
-            transform: translateY(0); 
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-
-        h2 { 
-            color: var(--primary-color); 
-            text-align: center; 
-            margin-bottom: 30px; 
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
             font-size: 2.2em;
             position: relative;
             display: inline-block;
             left: 50%;
             transform: translateX(-50%);
         }
-
         h2::after {
             content: '';
             position: absolute;
@@ -331,7 +292,6 @@
             height: 3px;
             background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
         }
-
         /* Servicios mejorados */
         .servicio-cards {
             display: grid;
@@ -339,7 +299,6 @@
             gap: 30px;
             margin-top: 30px;
         }
-
         .card {
             background: linear-gradient(145deg, var(--card-bg), var(--darker-bg));
             border-radius: var(--border-radius);
@@ -352,7 +311,6 @@
             position: relative;
             z-index: 1;
         }
-
         .card::before {
             content: '';
             position: absolute;
@@ -365,35 +323,29 @@
             transition: var(--transition);
             z-index: -1;
         }
-
-        .card:hover { 
-            transform: translateY(-10px); 
+        .card:hover {
+            transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
         }
-
         .card:hover::before {
             opacity: 1;
         }
-
         .card i {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: var(--primary-color);
             display: block;
         }
-
-        .card h3 { 
-            color: var(--primary-color); 
+        .card h3 {
+            color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.4em;
         }
-
-        .card p { 
-            color: var(--gray-text); 
-            font-size: 0.95em; 
+        .card p {
+            color: var(--gray-text);
+            font-size: 0.95em;
             line-height: 1.6;
         }
-
         /* Precios mejorados */
         .precio {
             background: linear-gradient(145deg, var(--card-bg), var(--darker-bg));
@@ -406,34 +358,28 @@
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         .precio:hover {
             transform: translateX(5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-
         .precio h3 {
             color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.4em;
         }
-
         .precio p {
             color: var(--gray-text);
             line-height: 1.6;
         }
-
-        ul { 
-            line-height: 1.8; 
+        ul {
+            line-height: 1.8;
             padding-left: 20px;
         }
-
         ul li {
             margin-bottom: 10px;
             position: relative;
             padding-left: 30px;
         }
-
         ul li::before {
             content: '✓';
             position: absolute;
@@ -441,7 +387,6 @@
             color: var(--primary-color);
             font-weight: bold;
         }
-
         /* Botones mejorados */
         .boton-contacto {
             display: inline-block;
@@ -460,7 +405,6 @@
             overflow: hidden;
             z-index: 1;
         }
-
         .boton-contacto::before {
             content: '';
             position: absolute;
@@ -472,16 +416,13 @@
             transition: var(--transition);
             z-index: -1;
         }
-
         .boton-contacto:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
         }
-
         .boton-contacto:hover::before {
             width: 100%;
         }
-
         /* Footer mejorado */
         footer {
             background-color: var(--darker-bg);
@@ -492,18 +433,15 @@
             font-size: 0.9em;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         footer a {
             color: var(--primary-color);
             text-decoration: none;
             transition: var(--transition);
         }
-
         footer a:hover {
             color: var(--secondary-color);
             text-decoration: underline;
         }
-
         /* Asistente de IA (en lugar del botón de email) */
         .assistant-container {
             position: fixed;
@@ -511,7 +449,6 @@
             right: 25px;
             z-index: 100;
         }
-
         .assistant-toggle {
             width: 60px;
             height: 60px;
@@ -528,12 +465,10 @@
             animation: float 3s ease-in-out infinite;
             border: none;
         }
-
         .assistant-toggle:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 25px rgba(0, 170, 255, 0.7);
         }
-
         .assistant-window {
             position: absolute;
             bottom: 80px;
@@ -549,12 +484,10 @@
             overflow: hidden;
             transition: var(--transition);
         }
-
         .assistant-window.active {
             display: flex;
             animation: fadeIn 0.3s ease-out;
         }
-
         .assistant-header {
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             padding: 15px 20px;
@@ -563,7 +496,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .assistant-header h3 {
             margin: 0;
             font-size: 1.1em;
@@ -571,7 +503,6 @@
             align-items: center;
             gap: 10px;
         }
-
         .assistant-close {
             background: none;
             border: none;
@@ -580,11 +511,9 @@
             cursor: pointer;
             transition: var(--transition);
         }
-
         .assistant-close:hover {
             transform: scale(1.2);
         }
-
         .assistant-messages {
             flex: 1;
             padding: 20px;
@@ -594,7 +523,6 @@
             flex-direction: column;
             gap: 15px;
         }
-
         .message {
             padding: 12px 15px;
             border-radius: 18px;
@@ -603,14 +531,12 @@
             font-size: 0.9em;
             animation: fadeIn 0.3s ease-out;
         }
-
         .message.user {
             align-self: flex-end;
             background: var(--primary-color);
             color: white;
             border-bottom-right-radius: 5px;
         }
-
         .message.assistant {
             align-self: flex-start;
             background: var(--card-bg);
@@ -618,14 +544,12 @@
             border-bottom-left-radius: 5px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .assistant-input {
             display: flex;
             padding: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             background: var(--darker-bg);
         }
-
         .assistant-input input {
             flex: 1;
             padding: 12px 15px;
@@ -637,11 +561,9 @@
             font-size: 0.9em;
             outline: none;
         }
-
         .assistant-input input::placeholder {
             color: var(--gray-text);
         }
-
         .assistant-send {
             background: var(--primary-color);
             color: white;
@@ -656,19 +578,16 @@
             justify-content: center;
             transition: var(--transition);
         }
-
         .assistant-send:hover {
             background: var(--primary-dark);
             transform: scale(1.05);
         }
-
         .suggested-questions {
             display: flex;
             flex-direction: column;
             gap: 10px;
             padding: 0 20px 20px;
         }
-
         .suggested-question {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -680,12 +599,34 @@
             transition: var(--transition);
             text-align: left;
         }
-
         .suggested-question:hover {
             background: rgba(0, 170, 255, 0.2);
             transform: translateX(5px);
         }
-
+        /* Botones de sugerencia dinámica */
+        .dynamic-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .dynamic-suggestions .suggested-question {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-text);
+            padding: 8px 12px;
+            border-radius: 16px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            flex: 1 1 auto;
+            max-width: 200px;
+        }
+        .dynamic-suggestions .suggested-question:hover {
+            background: rgba(0, 170, 255, 0.2);
+            transform: translateX(0);
+        }
         /* Tooltip para el asistente */
         .assistant-tooltip {
             position: absolute;
@@ -704,18 +645,16 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .assistant-toggle:hover .assistant-tooltip {
             opacity: 1;
             transform: translateY(0);
         }
-
         /* Responsive mejorado */
         @media (max-width: 768px) {
-            .nav-links { 
-                display: none; 
-                flex-direction: column; 
-                width: 100%; 
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -724,105 +663,83 @@
                 padding: 20px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             }
-            
-            .nav-links.active { 
-                display: flex; 
+            .nav-links.active {
+                display: flex;
             }
-            
             .nav-links a {
                 margin: 8px 0;
                 text-align: center;
                 width: 100%;
             }
-            
-            .hamburger { 
-                display: flex; 
+            .hamburger {
+                display: flex;
             }
-            
-            nav { 
-                flex-direction: row; 
-                justify-content: space-between; 
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
                 padding: 12px 20px;
             }
-
             header h1 {
                 font-size: 2em;
             }
-
             header p {
                 font-size: 1.1em;
             }
-
             h2 {
                 font-size: 1.8em;
             }
-
             section {
                 padding: 30px 20px;
             }
-            
             .assistant-tooltip {
                 display: none; /* Ocultar tooltip en móviles */
             }
-
             .assistant-container {
                 bottom: 25px;
                 right: 20px;
             }
-
             .assistant-window {
                 width: calc(100vw - 40px);
                 right: 0;
             }
         }
-
         @media (max-width: 600px) {
             body {
                 padding-top: 80px;
             }
-            
             header {
                 padding: 80px 20px 40px 20px;
             }
-            
             section:first-of-type {
                 margin-top: 20px;
             }
-            
             section {
                 margin: 30px auto 20px auto;
                 padding: 25px 15px;
             }
-            
-            header h1 { 
-                font-size: 1.8em; 
-                line-height: 1.3; 
+            header h1 {
+                font-size: 1.8em;
+                line-height: 1.3;
             }
-            
-            header p { 
-                font-size: 1em; 
+            header p {
+                font-size: 1em;
             }
-            
-            .servicio-cards { 
-                grid-template-columns: 1fr; 
+            .servicio-cards {
+                grid-template-columns: 1fr;
             }
-            
-            .boton-contacto { 
-                display: block; 
-                width: 100%; 
-                text-align: center; 
+            .boton-contacto {
+                display: block;
+                width: 100%;
+                text-align: center;
                 margin: 10px 0;
             }
-
             .trusted-logos {
                 gap: 20px;
             }
-
             .trusted-item {
                 padding: 8px 15px;
                 font-size: 1em;
             }
-
             .assistant-toggle {
                 width: 50px;
                 height: 50px;
@@ -836,7 +753,6 @@
         <h1>Te Hacemos Tu Propia Página Web y Personalizamos Tus Redes Sociales.</h1>
         <p>Una buena presencia online puede <span class="resaltar">aumentar clientes</span>, mejorar la imagen de tu negocio y <span class="resaltar">multiplicar tus ventas</span>.</p>
     </header>
-    
     <nav role="navigation" aria-label="Menú principal">
         <div class="logo" aria-label="Logo de TeCreamosWeb+">
             <span>Te</span><span>Creamos</span><span>Web+</span>
@@ -855,7 +771,6 @@
             <div></div>
         </button>
     </nav>
-
     <!-- Asistente de IA (en lugar del botón de email) -->
     <div class="assistant-container">
         <button class="assistant-toggle" aria-label="Abrir asistente de IA">
@@ -876,8 +791,8 @@
                 <div class="suggested-questions">
                     <button class="suggested-question" data-question="¿Qué servicios ofrecen?">¿Qué servicios ofrecen?</button>
                     <button class="suggested-question" data-question="¿Cuánto cuesta una página web?">¿Cuánto cuesta una página web?</button>
-                    <button class="suggested-question" data-question="¿Cuánto tiempo tardan en crear una web?">¿Cuánto tiempo tardan en crear una web?</button>
-                    <button class="suggested-question" data-question="¿Qué información necesitan para crear mi web?">¿Qué información necesitan para crear mi web?</button>
+                    <button class="suggested-question" data-question="¿Cuánto tiempo tardan en crear una web?">¿Cuánto tiempo tardan?</button>
+                    <button class="suggested-question" data-question="¿Qué información necesitan para crear mi web?">¿Qué información necesitan?</button>
                 </div>
             </div>
             <div class="assistant-input">
@@ -888,7 +803,6 @@
             </div>
         </div>
     </div>
-
     <!-- Sección "Han confiado en nosotros" -->
     <div class="trusted-container">
         <p class="trusted-title"><strong>Han confiado en nosotros:</strong></p>
@@ -897,12 +811,10 @@
             <a href="https://mipaginaonline.github.io/RestaurantLesGuatlles/" class="trusted-item">Les Guatlles</a>
         </div>
     </div>
-
     <!-- 1. Qué ofrecemos -->
     <section id="servicios">
         <h2>¿Qué ofrecemos?</h2>
         <p>Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
-
         <div class="servicio-cards">
             <div class="card">
                 <i class="fas fa-globe"></i>
@@ -921,7 +833,6 @@
             </div>
         </div>
     </section>
-
     <!-- 2. Por qué elegirnos -->
     <section id="porque">
         <h2>¿Por qué elegirnos?</h2>
@@ -933,7 +844,6 @@
             <li>Confianza y precios claros sin sorpresas.</li>
         </ul>
     </section>
-
     <!-- 3. Proceso profesional y garantía -->
     <section id="proceso">
         <h2>Proceso de Entrega y Garantía de Satisfacción</h2>
@@ -946,7 +856,6 @@
         </ul>
         <p>Este modelo asegura que solo pagues por un producto que realmente te guste y funcione para tu negocio.</p>
     </section>
-
     <!-- 4. Precios -->
     <section id="precios">
         <h2>Precios</h2>
@@ -963,7 +872,6 @@
             <p>En este sector le damos consejos sobre que contenido puede subir a redes sociales, para que su negocio aumente sus ventas. (No esta asegurado)</p>
         </div>
     </section>
-
     <!-- 5. Información requerida -->
     <section id="requisitos">
         <h2>Información requerida</h2>
@@ -977,7 +885,6 @@
             <li>Fotografías de productos, servicios o instalaciones (opcional)</li>
         </ul>
     </section>
-
     <!-- 6. Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
@@ -985,11 +892,9 @@
         <a href="mailto:tecreamosweb@gmail.com" class="boton-contacto"><i class="fas fa-envelope"></i> Escríbenos</a>
         <a href="mailto:tecreamosweb@gmail.com" class="boton-contacto"><i class="fas fa-rocket"></i> Solicita tu web hoy</a>
     </section>
-
     <footer role="contentinfo">
         <p>&copy; 2025 TeCreamosWeb – <a href="mailto:tecreamosweb@gmail.com">tecreamosweb@gmail.com</a></p>
     </footer>
-    
     <script>
         // Animación de secciones al hacer scroll
         const sections = document.querySelectorAll("section");
@@ -1000,20 +905,17 @@
                 }
             });
         }, { threshold: 0.1 });
-        
         sections.forEach(section => observer.observe(section));
 
         // Menú hamburguesa accesible
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         const navItems = document.querySelectorAll('.nav-links a');
-
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('open');
             hamburger.setAttribute("aria-expanded", navLinks.classList.contains('active'));
         });
-
         navItems.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -1038,7 +940,6 @@
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -1049,7 +950,7 @@
             });
         });
 
-        // Asistente de IA
+        // Asistente de IA - Mejorado
         const assistantToggle = document.querySelector('.assistant-toggle');
         const assistantWindow = document.querySelector('.assistant-window');
         const assistantClose = document.querySelector('.assistant-close');
@@ -1058,56 +959,95 @@
         const assistantMessages = document.querySelector('.assistant-messages');
         const suggestedQuestions = document.querySelectorAll('.suggested-question');
 
-        // Base de conocimiento del asistente
+        // Base de conocimiento del asistente - Mejorada
         const knowledgeBase = {
             "servicios": {
                 "preguntas": ["servicios", "qué ofrecen", "qué hacen", "qué ofreces", "qué haces"],
-                "respuesta": "Ofrecemos tres servicios principales:<br><br><strong>1. Página Web (150€)</strong>: Diseño moderno, adaptable a móviles y optimizado para mostrar lo mejor de tu negocio.<br><br><strong>2. Redes Sociales + Página Web (200€)</strong>: Configuración y diseño inicial de perfiles en redes sociales junto con tu página web.<br><br><strong>3. Redes Sociales + Página Web + Consejos (210€)</strong>: Todo lo anterior más consejos sobre contenido para redes sociales para aumentar tus ventas."
+                "respuesta": "Ofrecemos páginas web, gestión de redes sociales y asesoramiento. ¿Quieres saber más sobre páginas web, redes sociales o precios?",
+                "sugerencias": ["Páginas Web", "Redes Sociales", "Precios"]
             },
             "precios": {
                 "preguntas": ["precios", "cuánto cuesta", "coste", "precio", "tarifas"],
-                "respuesta": "Nuestros precios son:<br><br><strong>• Página web:</strong> 150€ (negociable según necesidades)<br><strong>• Redes sociales + Página web:</strong> 200€ (negociable)<br><strong>• Redes sociales + Página web + Consejos:</strong> 210€<br><br>Todos los precios son negociables según tus necesidades específicas."
+                "respuesta": "Tenemos paquetes desde 150€. ¿Quieres saber sobre la página web, redes + web, o el paquete con consejos?",
+                "sugerencias": ["Precio Página Web", "Precio Redes + Web", "Precio con Consejos"]
             },
             "tiempo": {
                 "preguntas": ["tiempo", "cuánto tardan", "plazo", "entrega", "cuándo estará lista"],
-                "respuesta": "Entregamos la página web funcional en un plazo aproximado de <strong>1 semana</strong>, asegurando eficiencia y rapidez."
+                "respuesta": "Entregamos en aproximadamente 1 semana. ¿Te gustaría ver cómo es el proceso de trabajo?",
+                "sugerencias": ["Proceso de Trabajo"]
             },
             "proceso": {
                 "preguntas": ["proceso", "cómo trabajan", "metodología", "cómo es el proceso", "garantía"],
-                "respuesta": "Nuestro proceso es transparente:<br><br>1. <strong>Desarrollo inicial</strong>: Creamos tu página web<br>2. <strong>Entrega para revisión</strong>: Te enviamos la web para que la evalúes<br>3. <strong>Satisfacción garantizada</strong>: Solo pagas si estás satisfecho con el resultado<br>4. <strong>No aprobada</strong>: Si no te gusta, no pagas nada"
+                "respuesta": "Creamos tu web, te la mostramos para revisión. Paga solo si estás satisfecho. ¿Te interesa solicitar tu web ahora?",
+                "sugerencias": ["Solicitar Web Ahora"]
             },
             "informacion": {
                 "preguntas": ["información", "qué necesitan", "datos", "requisitos", "qué debo proporcionar"],
-                "respuesta": "Para crear tu web necesitamos:<br><br>• Nombre del negocio<br>• Horarios de atención<br>• Dirección o zona de operación<br>• Información de contacto (teléfono, email)<br>• Lista de productos o servicios<br>• Fotografías (opcional)"
+                "respuesta": "Necesitamos nombre, horarios, dirección, contacto, servicios/productos y fotos (opcional). ¿Quieres ver la lista completa?",
+                "sugerencias": ["Ver Requisitos"]
             },
             "contacto": {
                 "preguntas": ["contacto", "cómo contactar", "email", "teléfono", "escribir"],
-                "respuesta": "Puedes contactarnos por email: <strong>tecreamosweb@gmail.com</strong><br><br>También puedes usar los botones de contacto en la sección correspondiente de nuestra página."
+                "respuesta": "Puedes escribirnos a tecreamosweb@gmail.com. ¿Quieres ir directamente a la sección de contacto?",
+                "sugerencias": ["Ir a Contacto"]
             },
             "porque": {
                 "preguntas": ["por qué elegirnos", "ventajas", "beneficios", "por qué ustedes"],
-                "respuesta": "Nos eligen porque:<br><br>• Experiencia personalizada adaptada a tu negocio<br>• Diseños modernos y atractivos<br>• Te acompañamos con asesoramiento digital<br>• Entrega rápida (aprox. 1 semana)<br>• Confianza y precios claros sin sorpresas"
+                "respuesta": "Diseños modernos, asesoramiento, entrega rápida (1 semana) y garantía de satisfacción. ¿Quieres ver algunos ejemplos de nuestro trabajo?",
+                "sugerencias": ["Ver Ejemplos"]
+            },
+            "pagina web": {
+                "preguntas": ["página web", "web", "sitio web", "página"],
+                "respuesta": "Creamos páginas web modernas y adaptables. ¿Te gustaría conocer el precio o solicitar una?",
+                "sugerencias": ["Precio Página Web", "Solicitar Web Ahora"]
+            },
+            "redes sociales": {
+                "preguntas": ["redes sociales", "redes", "instagram", "facebook"],
+                "respuesta": "Configuramos y diseñamos tus perfiles sociales. ¿Quieres saber el precio o ver cómo se hace?",
+                "sugerencias": ["Precio Redes + Web", "Ver Ejemplos"]
+            },
+            "solicitar web": {
+                "preguntas": ["solicitar", "contratar", "empezar", "quiero"],
+                "respuesta": "¡Perfecto! Puedes escribirnos a tecreamosweb@gmail.com o ir a la sección de contacto.",
+                "sugerencias": ["Ir a Contacto", "Escribir Email"]
             },
             "default": {
-                "respuesta": "Lo siento, no tengo información específica sobre eso. Puedes preguntarme sobre nuestros servicios, precios, proceso de trabajo o información requerida. Si necesitas más detalles, te recomiendo contactarnos directamente por email: tecreamosweb@gmail.com"
+                "respuesta": "No tengo información sobre eso. ¿Quieres saber sobre nuestros servicios, precios, proceso o cómo empezar?",
+                "sugerencias": ["Servicios", "Precios", "Proceso de Trabajo", "Solicitar Web Ahora"]
             }
         };
 
         // Función para encontrar la respuesta adecuada
         function findAnswer(question) {
             const lowerQuestion = question.toLowerCase();
-            
             for (const category in knowledgeBase) {
                 if (category === "default") continue;
-                
                 for (const keyword of knowledgeBase[category].preguntas) {
                     if (lowerQuestion.includes(keyword)) {
-                        return knowledgeBase[category].respuesta;
+                        return knowledgeBase[category];
                     }
                 }
             }
-            
-            return knowledgeBase.default.respuesta;
+            return knowledgeBase.default;
+        }
+
+        // Función para crear botones de sugerencias dinámicos
+        function createSuggestionButtons(suggestions) {
+            const container = document.createElement('div');
+            container.className = 'dynamic-suggestions';
+
+            suggestions.forEach(text => {
+                const button = document.createElement('button');
+                button.className = 'suggested-question';
+                button.textContent = text;
+                button.onclick = () => {
+                    // Simular que el usuario escribió la pregunta sugerida
+                    processQuestion(text);
+                };
+                container.appendChild(button);
+            });
+
+            return container;
         }
 
         // Función para agregar mensaje al chat
@@ -1122,11 +1062,19 @@
         // Función para procesar pregunta
         function processQuestion(question) {
             addMessage(question, true);
-            
             // Simular tiempo de procesamiento
             setTimeout(() => {
-                const answer = findAnswer(question);
-                addMessage(answer);
+                const responseObj = findAnswer(question);
+                addMessage(responseObj.respuesta);
+
+                if (responseObj.sugerencias && responseObj.sugerencias.length > 0) {
+                    const suggestionButtons = createSuggestionButtons(responseObj.sugerencias);
+                    assistantMessages.appendChild(suggestionButtons);
+                    // Asegurar scroll después de añadir botones
+                    setTimeout(() => {
+                         assistantMessages.scrollTop = assistantMessages.scrollHeight;
+                    }, 100);
+                }
             }, 1000);
         }
 
@@ -1134,11 +1082,9 @@
         assistantToggle.addEventListener('click', () => {
             assistantWindow.classList.toggle('active');
         });
-
         assistantClose.addEventListener('click', () => {
             assistantWindow.classList.remove('active');
         });
-
         assistantSend.addEventListener('click', () => {
             const question = assistantInput.value.trim();
             if (question) {
@@ -1146,7 +1092,6 @@
                 assistantInput.value = '';
             }
         });
-
         assistantInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 const question = assistantInput.value.trim();
@@ -1156,12 +1101,13 @@
                 }
             }
         });
-
-        // Preguntas sugeridas
+        // Preguntas sugeridas iniciales
         suggestedQuestions.forEach(button => {
             button.addEventListener('click', () => {
                 const question = button.getAttribute('data-question');
                 processQuestion(question);
+                // Ocultar preguntas sugeridas iniciales después de la primera interacción
+                document.querySelector('.suggested-questions').style.display = 'none';
             });
         });
     </script>
