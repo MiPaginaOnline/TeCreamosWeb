@@ -52,7 +52,7 @@
             padding-top: 100px;
             background: radial-gradient(circle at top left, rgba(0, 100, 200, 0.15), transparent 60%),
                         radial-gradient(circle at bottom right, rgba(255, 204, 0, 0.1), transparent 60%),
-                        #000000;
+                        linear-gradient(to bottom, #000000, #0a0a0a, #000000);
             color: var(--light-text);
             line-height: 1.6;
             overflow-x: hidden;
@@ -173,6 +173,10 @@
         }
         .nav-links a:hover::after {
             width: 80%;
+        }
+        /* Enlace de redes sociales para móvil */
+        .nav-redes {
+            display: none;
         }
         /* Hamburger icon mejorado */
         .hamburger {
@@ -423,6 +427,46 @@
         .boton-contacto:hover::before {
             width: 100%;
         }
+        /* Sección Redes Sociales */
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .red-social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--light-text);
+            transition: var(--transition);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .red-social:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .red-social i {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .red-social .fa-tiktok {
+            color: #000000;
+            text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
+        }
+        .red-social .fa-instagram {
+            color: #E1306C;
+        }
+        .red-social span {
+            font-weight: 500;
+            font-size: 0.9em;
+        }
         /* Footer mejorado */
         footer {
             background-color: var(--darker-bg);
@@ -671,6 +715,20 @@
                 text-align: center;
                 width: 100%;
             }
+            .nav-redes {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                gap: 20px;
+            }
+            .nav-redes a {
+                color: var(--lighter-text);
+                font-size: 1.5em;
+                transition: var(--transition);
+            }
+            .nav-redes a:hover {
+                color: var(--primary-color);
+            }
             .hamburger {
                 display: flex;
             }
@@ -745,6 +803,15 @@
                 height: 50px;
                 font-size: 20px;
             }
+            .redes-sociales {
+                gap: 20px;
+            }
+            .red-social {
+                padding: 10px;
+            }
+            .red-social i {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
@@ -764,6 +831,11 @@
             <a href="#precios">Precios</a>
             <a href="#requisitos">Información requerida</a>
             <a href="#contacto">Contacto</a>
+            <a href="#redes">Redes Sociales</a>
+            <div class="nav-redes">
+                <a href="https://www.tiktok.com/@tecreamos.web" aria-label="TikTok de TeCreamosWeb"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/tecreamos.web/" aria-label="Instagram de TeCreamosWeb"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
         <button class="hamburger" aria-label="Abrir o cerrar menú de navegación">
             <div></div>
@@ -860,15 +932,19 @@
     <section id="precios">
         <h2>Precios</h2>
         <div class="precio">
-            <h3>Página web – <strong>150€</strong></h3>
+            <h3>Página web – <strong>250€</strong></h3>
             <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. Precio negociable según tus necesidades.</p>
         </div>
         <div class="precio">
-            <h3>Redes sociales + Página web – <strong>200€</strong></h3>
+            <h3>Redes sociales + Página web – <strong>300€</strong></h3>
             <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
         </div>
         <div class="precio">
-            <h3>Redes sociales + Página web + Consejos para que tu negocio crezca – <strong>210€</strong></h3>
+            <h3>Mantenimiento de página web – <strong>10€/año</strong></h3>
+            <p>Mantenimiento anual de tu página web, incluyendo actualizaciones necesarias para mantenerla funcional y segura.</p>
+        </div>
+        <div class="precio">
+            <h3>Consejos para que tu negocio crezca – <strong>+10€</strong></h3>
             <p>En este sector le damos consejos sobre que contenido puede subir a redes sociales, para que su negocio aumente sus ventas. (No esta asegurado)</p>
         </div>
     </section>
@@ -885,7 +961,22 @@
             <li>Fotografías de productos, servicios o instalaciones (opcional)</li>
         </ul>
     </section>
-    <!-- 6. Contacto -->
+    <!-- 6. Redes Sociales -->
+    <section id="redes">
+        <h2>Redes Sociales</h2>
+        <p>Síguenos en nuestras redes sociales para estar al día de nuestras novedades y consejos:</p>
+        <div class="redes-sociales">
+            <a href="https://www.tiktok.com/@tecreamos.web" class="red-social" target="_blank" aria-label="TikTok de TeCreamosWeb">
+                <i class="fab fa-tiktok"></i>
+                <span>@tecreamos.web</span>
+            </a>
+            <a href="https://www.instagram.com/tecreamos.web/" class="red-social" target="_blank" aria-label="Instagram de TeCreamosWeb">
+                <i class="fab fa-instagram"></i>
+                <span>@tecreamos.web</span>
+            </a>
+        </div>
+    </section>
+    <!-- 7. Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
         <p>¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
@@ -968,8 +1059,8 @@
             },
             "precios": {
                 "preguntas": ["precios", "cuánto cuesta", "coste", "precio", "tarifas"],
-                "respuesta": "Tenemos paquetes desde 150€. ¿Quieres saber sobre la página web, redes + web, o el paquete con consejos?",
-                "sugerencias": ["Precio Página Web", "Precio Redes + Web", "Precio con Consejos"]
+                "respuesta": "Tenemos paquetes desde 250€. ¿Quieres saber sobre la página web, redes + web, mantenimiento o consejos?",
+                "sugerencias": ["Precio Página Web", "Precio Redes + Web", "Mantenimiento", "Consejos"]
             },
             "tiempo": {
                 "preguntas": ["tiempo", "cuánto tardan", "plazo", "entrega", "cuándo estará lista"],
@@ -1005,6 +1096,16 @@
                 "preguntas": ["redes sociales", "redes", "instagram", "facebook"],
                 "respuesta": "Configuramos y diseñamos tus perfiles sociales. ¿Quieres saber el precio o ver cómo se hace?",
                 "sugerencias": ["Precio Redes + Web", "Ver Ejemplos"]
+            },
+            "mantenimiento": {
+                "preguntas": ["mantenimiento", "actualizaciones", "soporte"],
+                "respuesta": "Ofrecemos mantenimiento anual por 10€ para mantener tu web actualizada y segura. ¿Te interesa?",
+                "sugerencias": ["Solicitar Mantenimiento"]
+            },
+            "consejos": {
+                "preguntas": ["consejos", "crecimiento", "estrategia"],
+                "respuesta": "Ofrecemos consejos personalizados para que tu negocio crezca por solo 10€ adicionales. ¿Quieres saber más?",
+                "sugerencias": ["Solicitar Consejos"]
             },
             "solicitar web": {
                 "preguntas": ["solicitar", "contratar", "empezar", "quiero"],
