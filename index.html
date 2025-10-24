@@ -417,6 +417,10 @@
             color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         .precio p {
             color: var(--gray-text);
@@ -747,25 +751,26 @@
         .precio-anterior {
             text-decoration: line-through;
             color: var(--gray-text);
-            font-size: 0.9em;
+            font-size: 1em;
             margin-right: 10px;
         }
         .precio-actual {
             color: var(--secondary-color);
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.4em;
         }
         .etiqueta-oferta {
             position: absolute;
             top: 15px;
             right: 15px;
-            background: linear-gradient(135deg, var(--secondary-color), #ff9900);
-            color: var(--darker-bg);
-            padding: 5px 10px;
+            background: linear-gradient(135deg, #ff3333, #cc0000);
+            color: white;
+            padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.8em;
             font-weight: bold;
-            box-shadow: 0 3px 10px rgba(255, 204, 0, 0.3);
+            box-shadow: 0 3px 10px rgba(255, 51, 51, 0.4);
+            z-index: 2;
         }
         /* Responsive mejorado */
         @media (max-width: 768px) {
@@ -836,16 +841,16 @@
             }
             /* Ajustes para etiquetas de oferta en móvil */
             .etiqueta-oferta {
-                position: static;
-                display: inline-block;
-                margin-bottom: 10px;
+                top: 10px;
+                right: 10px;
                 font-size: 0.75em;
+                padding: 5px 10px;
             }
-            .precio-oferta h3 {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
+            .precio h3 {
+                padding-right: 80px;
+            }
+            .precio-actual {
+                font-size: 1.3em;
             }
         }
         @media (max-width: 600px) {
@@ -905,10 +910,16 @@
             }
             .precio h3 {
                 font-size: 1.2em;
+                padding-right: 70px;
             }
             .etiqueta-oferta {
+                top: 8px;
+                right: 8px;
                 padding: 4px 8px;
                 font-size: 0.7em;
+            }
+            .precio-actual {
+                font-size: 1.2em;
             }
         }
     </style>
