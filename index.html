@@ -407,6 +407,7 @@
             box-shadow: var(--box-shadow);
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
         }
         .precio:hover {
             transform: translateX(5px);
@@ -739,6 +740,33 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Estilos para precios con oferta */
+        .precio-oferta {
+            position: relative;
+        }
+        .precio-anterior {
+            text-decoration: line-through;
+            color: var(--gray-text);
+            font-size: 0.9em;
+            margin-right: 10px;
+        }
+        .precio-actual {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .etiqueta-oferta {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, var(--secondary-color), #ff9900);
+            color: var(--darker-bg);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(255, 204, 0, 0.3);
+        }
         /* Responsive mejorado */
         @media (max-width: 768px) {
             .nav-links {
@@ -977,12 +1005,20 @@
     <!-- 4. Precios -->
     <section id="precios">
         <h2>Precios</h2>
-        <div class="precio">
-            <h3>Página web – <strong>250€</strong></h3>
+        <div class="precio precio-oferta">
+            <div class="etiqueta-oferta">¡Oferta!</div>
+            <h3>Página web – 
+                <span class="precio-anterior">250€</span>
+                <span class="precio-actual">200€</span>
+            </h3>
             <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. Precio negociable según tus necesidades.</p>
         </div>
-        <div class="precio">
-            <h3>Redes sociales + Página web – <strong>300€</strong></h3>
+        <div class="precio precio-oferta">
+            <div class="etiqueta-oferta">¡Oferta!</div>
+            <h3>Redes sociales + Página web – 
+                <span class="precio-anterior">300€</span>
+                <span class="precio-actual">250€</span>
+            </h3>
             <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
         </div>
         <div class="precio">
@@ -1105,7 +1141,7 @@
             },
             "precios": {
                 "preguntas": ["precios", "cuánto cuesta", "coste", "precio", "tarifas"],
-                "respuesta": "Tenemos paquetes desde 250€. ¿Quieres saber sobre la página web, redes + web, mantenimiento o consejos?",
+                "respuesta": "Tenemos paquetes desde 200€. ¿Quieres saber sobre la página web, redes + web, mantenimiento o consejos?",
                 "sugerencias": ["Precio Página Web", "Precio Redes + Web", "Mantenimiento", "Consejos"]
             },
             "tiempo": {
@@ -1126,7 +1162,7 @@
             "contacto": {
                 "preguntas": ["contacto", "cómo contactar", "email", "teléfono", "escribir"],
                 "respuesta": "Puedes escribirnos a tecreamosweb@gmail.com. ¿Quieres ir directamente a la sección de contacto?",
-                "sugerencias": ["Ir a Contacto"]
+                "sugerencias": ["Ir a Contacto", "Escribir Email"]
             },
             "porque": {
                 "preguntas": ["por qué elegirnos", "ventajas", "beneficios", "por qué ustedes"],
