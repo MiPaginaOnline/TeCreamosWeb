@@ -834,6 +834,19 @@
                 width: calc(100vw - 40px);
                 right: 0;
             }
+            /* Ajustes para etiquetas de oferta en móvil */
+            .etiqueta-oferta {
+                position: static;
+                display: inline-block;
+                margin-bottom: 10px;
+                font-size: 0.75em;
+            }
+            .precio-oferta h3 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
         }
         @media (max-width: 600px) {
             body {
@@ -885,6 +898,17 @@
             }
             .red-social i {
                 font-size: 2em;
+            }
+            /* Ajustes adicionales para móviles pequeños */
+            .precio {
+                padding: 20px 15px;
+            }
+            .precio h3 {
+                font-size: 1.2em;
+            }
+            .etiqueta-oferta {
+                padding: 4px 8px;
+                font-size: 0.7em;
             }
         }
     </style>
