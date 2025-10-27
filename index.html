@@ -773,14 +773,14 @@
             z-index: 2;
         }
         
-        /* ANUNCIO DE OFERTA - NUEVO */
+        /* ANUNCIO DE OFERTA - MEJORADO */
         .oferta-popup {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
+            background-color: rgba(0, 0, 0, 0.9);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -796,14 +796,14 @@
         }
         
         .oferta-container {
-            background: linear-gradient(145deg, var(--card-bg), var(--darker-bg));
+            background: linear-gradient(145deg, #1a2a3a, #0d1a26);
             border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 25px;
+            box-shadow: 0 15px 40px rgba(0, 100, 255, 0.4);
+            padding: 30px;
             max-width: 380px;
             width: 90%;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 150, 255, 0.3);
             text-align: center;
             animation: popIn 0.5s ease-out forwards;
             overflow: hidden;
@@ -815,8 +815,8 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            height: 4px;
+            background: linear-gradient(90deg, #00aaff, #00ffaa, #aaff00);
         }
         
         @keyframes popIn {
@@ -826,16 +826,16 @@
         
         .oferta-close {
             position: absolute;
-            top: 10px;
-            right: 12px;
-            background: rgba(255, 255, 255, 0.1);
+            top: 12px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.15);
             border: none;
-            color: var(--gray-text);
-            font-size: 1em;
+            color: var(--lighter-text);
+            font-size: 1.1em;
             cursor: pointer;
             transition: var(--transition);
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -844,69 +844,79 @@
         
         .oferta-close:hover {
             color: var(--lighter-text);
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 50, 50, 0.7);
             transform: rotate(90deg);
         }
         
         .oferta-icon {
-            font-size: 2em;
-            color: var(--primary-color);
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            color: #00ffaa;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
         }
         
         .oferta-titulo-principal {
-            color: var(--lighter-text);
-            font-size: 1.3em;
-            margin-bottom: 5px;
-            font-weight: 600;
+            color: #00ffaa;
+            font-size: 1.5em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+            position: relative;
+        }
+        
+        .oferta-titulo-principal::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffaa, transparent);
         }
         
         .oferta-subtitulo {
-            color: var(--primary-color);
-            font-size: 0.95em;
-            margin-bottom: 15px;
+            color: #aaff00;
+            font-size: 1em;
+            margin-bottom: 25px;
             font-weight: 500;
+            width: 100%;
+            text-align: center;
         }
         
         .oferta-precios {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
-            margin: 15px 0;
+            gap: 20px;
+            margin: 20px 0;
         }
         
         .oferta-precio-anterior {
             color: var(--gray-text);
             text-decoration: line-through;
-            font-size: 1.1em;
+            font-size: 1.3em;
         }
         
         .oferta-precio-actual {
-            color: var(--lighter-text);
-            font-size: 1.5em;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #00ffaa;
+            font-size: 1.8em;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
         }
         
         .oferta-descuento {
-            background: linear-gradient(135deg, var(--secondary-color), #ffaa00);
-            color: var(--darker-bg);
-            padding: 5px 12px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, #ff3366, #ff0033);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
             font-weight: 700;
-            font-size: 0.85em;
+            font-size: 1em;
             display: inline-block;
-            margin-bottom: 15px;
-        }
-        
-        .oferta-descripcion {
-            color: var(--gray-text);
-            font-size: 0.85em;
-            line-height: 1.4;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(255, 0, 51, 0.4);
         }
         
         /* Responsive mejorado */
@@ -993,19 +1003,24 @@
             /* Responsive para anuncio de oferta */
             @media (max-width: 480px) {
                 .oferta-container {
-                    padding: 20px 15px;
+                    padding: 25px 20px;
                 }
                 
                 .oferta-titulo-principal {
-                    font-size: 1.2em;
+                    font-size: 1.3em;
                 }
                 
                 .oferta-precio-anterior {
-                    font-size: 1em;
+                    font-size: 1.1em;
                 }
                 
                 .oferta-precio-actual {
-                    font-size: 1.3em;
+                    font-size: 1.5em;
+                }
+                
+                .oferta-descuento {
+                    font-size: 0.9em;
+                    padding: 6px 15px;
                 }
             }
         }
@@ -1089,7 +1104,7 @@
             </button>
             
             <div class="oferta-icon">
-                <i class="fas fa-globe"></i>
+                <i class="fas fa-bolt"></i>
             </div>
             
             <h2 class="oferta-titulo-principal">Oferta Página Web</h2>
@@ -1101,10 +1116,6 @@
             </div>
             
             <div class="oferta-descuento">Ahorra 50€</div>
-            
-            <p class="oferta-descripcion">
-                Diseño profesional y adaptable para tu negocio
-            </p>
         </div>
     </div>
 
