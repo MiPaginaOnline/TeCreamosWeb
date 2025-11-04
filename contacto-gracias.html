@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | TeCreamosWeb+</title>
+  <title>Gracias | TeCreamosWeb+</title>
 
   <!-- SEO -->
-  <meta name="description" content="Contacta con TeCreamosWeb+ para solicitar tu página web, redes sociales o asesoramiento digital. ¡Transforma tu presencia online!">
-  <meta name="keywords" content="contacto, páginas web, redes sociales, asesoramiento digital, marketing online">
+  <meta name="description" content="Gracias por contactar con TeCreamosWeb+. Pronto nos pondremos en contacto contigo para crear tu presencia online.">
+  <meta name="keywords" content="gracias, contacto, páginas web, redes sociales, asesoramiento digital">
   <meta name="author" content="TeCreamosWeb">
 
   <!-- Meta tags para Google -->
-  <meta itemprop="name" content="Contacto | TeCreamosWeb+">
-  <meta itemprop="description" content="Contacta con TeCreamosWeb+ para solicitar tu página web, redes sociales o asesoramiento digital.">
+  <meta itemprop="name" content="Gracias | TeCreamosWeb+">
+  <meta itemprop="description" content="Gracias por contactar con TeCreamosWeb+. Pronto nos pondremos en contacto contigo.">
   <meta itemprop="image" content="https://tecreamosweb.es/Foto%20perfil%20(5)-modified.png">
 
   <!-- Open Graph para redes sociales -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contacto | TeCreamosWeb+">
-  <meta property="og:description" content="Contacta con TeCreamosWeb+ para solicitar tu página web, redes sociales o asesoramiento digital.">
+  <meta property="og:title" content="Gracias | TeCreamosWeb+">
+  <meta property="og:description" content="Gracias por contactar con TeCreamosWeb+. Pronto nos pondremos en contacto contigo.">
   <meta property="og:image" content="https://tecreamosweb.es/Foto%20perfil%20(5)-modified.png">
   <meta property="og:image:width" content="500">
   <meta property="og:image:height" content="500">
-  <meta property="og:url" content="https://tecreamosweb.es/contacto.html">
+  <meta property="og:url" content="https://tecreamosweb.es/contacto-gracias.html">
 
   <!-- Twitter Card -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Contacto | TeCreamosWeb+">
-  <meta property="twitter:description" content="Contacta con TeCreamosWeb+ para solicitar tu página web, redes sociales o asesoramiento digital.">
+  <meta property="twitter:title" content="Gracias | TeCreamosWeb+">
+  <meta property="twitter:description" content="Gracias por contactar con TeCreamosWeb+. Pronto nos pondremos en contacto contigo.">
   <meta property="twitter:image" content="https://tecreamosweb.es/Foto%20perfil%20(5)-modified.png">
 
   <!-- Favicon -->
@@ -60,6 +60,7 @@
   </script>
     
     <style>
+        /* Estilos copiados de la página de contacto para mantener consistencia */
         :root {
             --primary-color: #00aaff;
             --primary-dark: #0088cc;
@@ -78,11 +79,6 @@
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
         }
         * {
             margin: 0;
@@ -140,20 +136,6 @@
             margin-left: auto;
             margin-right: auto;
             animation: fadeIn 1.5s ease-out;
-        }
-        header p span.resaltar {
-            color: var(--lighter-text);
-            font-weight: 600;
-            position: relative;
-        }
-        header p span.resaltar::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
         }
         /* Nav mejorada */
         nav {
@@ -248,200 +230,6 @@
         .hamburger.open div:nth-child(3) {
             transform: rotate(45deg) translate(-5px, -6px);
         }
-        /* Secciones mejoradas - SIN MARCOS EXTERNOS */
-        section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 40px 30px;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease-out;
-            position: relative;
-            overflow: hidden;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Títulos mejorados con degradado elegante */
-        h2 {
-            color: transparent;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.2em;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #4A90E2, #7B68EE, #00BFFF);
-            -webkit-background-clip: text;
-            background-clip: text;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #4A90E2, #7B68EE, #00BFFF);
-            border-radius: 2px;
-        }
-        /* Formulario de contacto */
-        .form-container {
-            background: linear-gradient(145deg, rgba(35, 35, 35, 0.95), rgba(25, 25, 25, 0.95));
-            border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            z-index: 1;
-            animation: fadeIn 1s ease-out;
-        }
-        .form-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(123, 104, 238, 0.05));
-            opacity: 0;
-            transition: var(--transition);
-            z-index: -1;
-        }
-        .form-container:hover::before {
-            opacity: 1;
-        }
-        .form-group {
-            margin-bottom: 25px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--lighter-text);
-            font-weight: 500;
-            font-size: 1.05em;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            background: rgba(40, 40, 40, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: var(--lighter-text);
-            font-family: 'Poppins', sans-serif;
-            font-size: 1em;
-            transition: var(--transition);
-            outline: none;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: #4A90E2;
-            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
-        }
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        /* Botones mejorados */
-        .boton-contacto {
-            display: inline-block;
-            padding: 16px 32px;
-            background: linear-gradient(135deg, #4A90E2, #7B68EE);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            margin: 10px 10px;
-            font-weight: 600;
-            transition: var(--transition);
-            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            font-size: 1.05em;
-            width: 100%;
-            text-align: center;
-        }
-        .boton-contacto:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none !important;
-        }
-        .boton-contacto::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(135deg, #7B68EE, #4A90E2);
-            transition: var(--transition);
-            z-index: -1;
-        }
-        .boton-contacto:hover:not(:disabled) {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.5);
-        }
-        .boton-contacto:hover:not(:disabled)::before {
-            width: 100%;
-        }
-        .boton-volver {
-            display: inline-block;
-            padding: 12px 24px;
-            background: rgba(40, 40, 40, 0.9);
-            color: var(--lighter-text);
-            text-decoration: none;
-            border-radius: 10px;
-            margin: 10px 10px;
-            font-weight: 500;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            font-size: 1em;
-            width: 100%;
-            text-align: center;
-        }
-        .boton-volver:hover {
-            background: rgba(60, 60, 60, 0.9);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        .botones-container {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        /* Footer mejorado */
-        footer {
-            background-color: var(--darker-bg);
-            color: var(--gray-text);
-            text-align: center;
-            padding: 40px 25px;
-            margin-top: 60px;
-            font-size: 0.9em;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        footer a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
         /* Mensaje de confirmación */
         .mensaje-confirmacion {
             background: linear-gradient(145deg, rgba(35, 35, 35, 0.95), rgba(25, 25, 25, 0.95));
@@ -469,6 +257,62 @@
             color: var(--gray-text);
             line-height: 1.6;
             margin-bottom: 20px;
+        }
+        /* Botones mejorados */
+        .boton-contacto {
+            display: inline-block;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #4A90E2, #7B68EE);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            margin: 10px 10px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            font-size: 1.05em;
+        }
+        .boton-contacto::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(135deg, #7B68EE, #4A90E2);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        .boton-contacto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.5);
+        }
+        .boton-contacto:hover::before {
+            width: 100%;
+        }
+        /* Footer mejorado */
+        footer {
+            background-color: var(--darker-bg);
+            color: var(--gray-text);
+            text-align: center;
+            padding: 40px 25px;
+            margin-top: 60px;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        footer a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
         }
         /* Responsive mejorado */
         @media (max-width: 768px) {
@@ -520,17 +364,8 @@
             header p {
                 font-size: 1.1em;
             }
-            h2 {
-                font-size: 1.8em;
-            }
-            section {
+            .mensaje-confirmacion {
                 padding: 30px 20px;
-            }
-            .form-container {
-                padding: 30px 20px;
-            }
-            .botones-container {
-                flex-direction: column;
             }
         }
         @media (max-width: 600px) {
@@ -540,13 +375,6 @@
             header {
                 padding: 60px 20px 30px 20px;
             }
-            section:first-of-type {
-                margin-top: 20px;
-            }
-            section {
-                margin: 30px auto 20px auto;
-                padding: 25px 15px;
-            }
             header h1 {
                 font-size: 1.8em;
                 line-height: 1.3;
@@ -554,16 +382,23 @@
             header p {
                 font-size: 1em;
             }
-            .form-container {
+            .mensaje-confirmacion {
                 padding: 25px 15px;
+                margin: 20px;
+            }
+            .boton-contacto {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Contacta con TeCreamosWeb+</h1>
-        <p>Completa el formulario y nos pondremos en contacto contigo para <span class="resaltar">crear tu presencia online</span>.</p>
+        <h1>¡Gracias por contactarnos!</h1>
+        <p>Hemos recibido tu solicitud y pronto nos pondremos en contacto contigo.</p>
     </header>
     <nav role="navigation" aria-label="Menú principal">
         <div class="logo" aria-label="Logo de TeCreamosWeb">
@@ -573,7 +408,7 @@
             <a href="index.html">Inicio</a>
             <a href="index.html#servicios">Servicios</a>
             <a href="index.html#precios">Precios</a>
-            <a href="index.html#contacto">Contacto</a>
+            <a href="contacto.html">Contacto</a>
             <div class="nav-redes">
                 <a href="https://www.tiktok.com/@tecreamos.web" aria-label="TikTok de TeCreamosWeb"><i class="fab fa-tiktok"></i></a>
                 <a href="https://www.instagram.com/tecreamos.web/" aria-label="Instagram de TeCreamosWeb"><i class="fab fa-instagram"></i></a>
@@ -586,62 +421,19 @@
         </button>
     </nav>
 
-    <section id="formulario-contacto">
-        <h2>Solicita tu Presencia Online</h2>
-        <div class="form-container">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="servicio"><i class="fas fa-cogs"></i> Tipo de Servicio</label>
-                    <select id="servicio" name="servicio" required>
-                        <option value="" disabled selected>Selecciona un servicio</option>
-                        <option value="Página Web (200€)">Página Web - 200€</option>
-                        <option value="Página Web + Redes Sociales (250€)">Página Web + Redes Sociales - 250€</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="mensaje"><i class="fas fa-comment"></i> Mensaje Personalizado</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Describe tu proyecto, necesidades específicas o cualquier información que consideres relevante..." required></textarea>
-                </div>
-                
-                <div class="botones-container">
-                    <button type="submit" class="boton-contacto" id="submitBtn">
-                        <i class="fas fa-paper-plane"></i> Enviar Solicitud
-                    </button>
-                    <a href="index.html" class="boton-volver"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
-                </div>
-            </form>
-        </div>
-    </section>
+    <div class="mensaje-confirmacion">
+        <i class="fas fa-check-circle"></i>
+        <h3>Solicitud Recibida</h3>
+        <p>Hemos recibido tu información correctamente. Revisaremos tu solicitud y nos pondremos en contacto contigo en un plazo máximo de 24-48 horas para discutir los detalles de tu proyecto.</p>
+        <p>Mientras tanto, puedes explorar nuestros servicios o seguirnos en nuestras redes sociales para conocer más sobre nuestro trabajo.</p>
+        <a href="index.html" class="boton-contacto"><i class="fas fa-home"></i> Volver al Inicio</a>
+    </div>
 
     <footer role="contentinfo">
         <p>&copy; 2025 TeCreamosWeb – <a href="mailto:tecreamosweb@gmail.com">tecreamosweb@gmail.com</a></p>
     </footer>
 
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // Inicializar EmailJS - REEMPLAZA CON TUS PROPIAS CREDENCIALES
-        (function() {
-            emailjs.init("TU_PUBLIC_KEY_AQUI"); // Reemplaza con tu public key de EmailJS
-        })();
-
-        // Animación de secciones al hacer scroll
-        const sections = document.querySelectorAll("section");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.1 });
-        sections.forEach(section => observer.observe(section));
-
         // Menú hamburguesa accesible
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
@@ -667,58 +459,6 @@
             } else {
                 nav.classList.remove('scrolled');
             }
-        });
-
-        // Manejo del formulario con EmailJS
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validación básica
-            const email = document.getElementById('email').value;
-            const servicio = document.getElementById('servicio').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            if (!email || !servicio || !mensaje) {
-                alert('Por favor, completa todos los campos del formulario.');
-                return;
-            }
-            
-            // Validación de email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Por favor, introduce una dirección de correo electrónico válida.');
-                return;
-            }
-            
-            // Cambiar texto del botón
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            submitBtn.disabled = true;
-            
-            // Preparar datos para enviar
-            const templateParams = {
-                from_email: email,
-                service: servicio,
-                message: mensaje,
-                to_email: 'tecreamosweb@gmail.com'
-            };
-            
-            // Enviar email con EmailJS - REEMPLAZA CON TUS PROPIOS IDs
-            emailjs.send('TU_SERVICE_ID_AQUI', 'TU_TEMPLATE_ID_AQUI', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    // Redirigir a página de agradecimiento
-                    window.location.href = 'contacto-gracias.html';
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o escríbenos directamente a tecreamosweb@gmail.com');
-                    // Restaurar botón
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                });
         });
     </script>
 </body>
