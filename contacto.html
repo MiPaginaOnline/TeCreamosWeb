@@ -371,6 +371,11 @@
             width: 100%;
             text-align: center;
         }
+        .boton-contacto:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none !important;
+        }
         .boton-contacto::before {
             content: '';
             position: absolute;
@@ -382,11 +387,11 @@
             transition: var(--transition);
             z-index: -1;
         }
-        .boton-contacto:hover {
+        .boton-contacto:hover:not(:disabled) {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(74, 144, 226, 0.5);
         }
-        .boton-contacto:hover::before {
+        .boton-contacto:hover:not(:disabled)::before {
             width: 100%;
         }
         .boton-volver {
@@ -584,12 +589,7 @@
     <section id="formulario-contacto">
         <h2>Solicita tu Presencia Online</h2>
         <div class="form-container">
-            <form id="contactForm" action="https://formsubmit.co/tecreamosweb@gmail.com" method="POST">
-                <!-- Campos ocultos para FormSubmit -->
-                <input type="hidden" name="_subject" value="Nueva solicitud de TeCreamosWeb+">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://tecreamosweb.es/contacto-gracias.html">
-                
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
                     <input type="email" id="email" name="email" placeholder="tu@email.com" required>
@@ -613,7 +613,9 @@
                 </div>
                 
                 <div class="botones-container">
-                    <button type="submit" class="boton-contacto"><i class="fas fa-paper-plane"></i> Enviar Solicitud</button>
+                    <button type="submit" class="boton-contacto" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                    </button>
                     <a href="index.html" class="boton-volver"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
                 </div>
             </form>
@@ -624,7 +626,14 @@
         <p>&copy; 2025 TeCreamosWeb – <a href="mailto:tecreamosweb@gmail.com">tecreamosweb@gmail.com</a></p>
     </footer>
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // Inicializar EmailJS - REEMPLAZA CON TUS PROPIAS CREDENCIALES
+        (function() {
+            emailjs.init("UEH2vHZahn5uA1IL1"); // Reemplaza con tu public key de EmailJS
+        })();
+
         // Animación de secciones al hacer scroll
         const sections = document.querySelectorAll("section");
         const observer = new IntersectionObserver(entries => {
@@ -663,16 +672,19 @@
             }
         });
 
-        // Validación del formulario
+        // Manejo del formulario con EmailJS
         const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        
         contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             // Validación básica
             const email = document.getElementById('email').value;
             const servicio = document.getElementById('servicio').value;
             const mensaje = document.getElementById('mensaje').value;
             
             if (!email || !servicio || !mensaje) {
-                e.preventDefault();
                 alert('Por favor, completa todos los campos del formulario.');
                 return;
             }
@@ -680,12 +692,36 @@
             // Validación de email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                e.preventDefault();
                 alert('Por favor, introduce una dirección de correo electrónico válida.');
                 return;
             }
             
-            // Si todo está bien, el formulario se enviará
+            // Cambiar texto del botón
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+            
+            // Preparar datos para enviar
+            const templateParams = {
+                from_email: email,
+                service: servicio,
+                message: mensaje,
+                to_email: 'tecreamosweb@gmail.com'
+            };
+            
+            // Enviar email con EmailJS - REEMPLAZA CON TUS PROPIOS IDs
+            emailjs.send('service_vjcdjcp', 'template_l2npd4c', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    // Redirigir a página de agradecimiento
+                    window.location.href = 'contacto-gracias.html';
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o escríbenos directamente a tecreamosweb@gmail.com');
+                    // Restaurar botón
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     </script>
 </body>
