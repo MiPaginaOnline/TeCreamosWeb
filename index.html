@@ -1247,7 +1247,9 @@
                 <span class="precio-actual">200€</span>
             </h3>
             <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. Precio negociable según tus necesidades.</p>
-            <a href="mailto:tecreamosweb@gmail.com?subject=Solicitud de Página Web&body=Hola, me interesa solicitar una página web. Por favor, contactenme para más detalles." class="boton-contacto" style="margin-top: 20px; display: block; text-align: center;"><i class="fas fa-rocket"></i> Solicita tu web hoy</a>
+            <a href="#" class="boton-contacto contacto-btn" style="margin-top: 20px; display: block; text-align: center;" data-service="Página Web">
+                <i class="fas fa-rocket"></i> Solicita tu web hoy
+            </a>
         </div>
         <div class="precio precio-oferta">
             <div class="etiqueta-oferta">¡Oferta!</div>
@@ -1256,7 +1258,9 @@
                 <span class="precio-actual">250€</span>
             </h3>
             <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
-            <a href="mailto:tecreamosweb@gmail.com?subject=Solicitud de Página Web + Redes Sociales&body=Hola, me interesa solicitar una página web con gestión de redes sociales. Por favor, contactenme para más detalles." class="boton-contacto" style="margin-top: 20px; display: block; text-align: center;"><i class="fas fa-rocket"></i> Solicitar</a>
+            <a href="#" class="boton-contacto contacto-btn" style="margin-top: 20px; display: block; text-align: center;" data-service="Página Web + Redes Sociales">
+                <i class="fas fa-rocket"></i> Solicitar
+            </a>
         </div>
         <div class="precio">
             <h3>Mantenimiento de página web – <strong>50€/año</strong></h3>
@@ -1283,7 +1287,9 @@
         <h2>Contacto</h2>
         <p style="text-align: center;">¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
         <div style="text-align: center; margin-top: 30px;">
-            <a href="mailto:tecreamosweb@gmail.com" class="boton-contacto"><i class="fas fa-envelope"></i> Escríbenos</a>
+            <a href="#" class="boton-contacto contacto-btn" data-service="Consulta General">
+                <i class="fas fa-envelope"></i> Escríbenos
+            </a>
         </div>
     </section>
     <footer role="contentinfo">
@@ -1538,6 +1544,29 @@
             if (e.key === 'Escape') {
                 document.getElementById('ofertaPopup').classList.remove('active');
             }
+        });
+
+        // DETECCIÓN DE DISPOSITIVO Y MANEJO DE BOTONES DE CONTACTO
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        }
+
+        // Manejar clics en botones de contacto
+        document.querySelectorAll('.contacto-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const service = this.getAttribute('data-service');
+                
+                if (isMobileDevice()) {
+                    // En móvil: usar mailto como antes
+                    let subject = 'Solicitud de ' + service;
+                    let body = 'Hola, me interesa solicitar ' + service + '. Por favor, contáctenme para más detalles.';
+                    window.location.href = 'mailto:tecreamosweb@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                } else {
+                    // En escritorio: ir a la página de contacto
+                    window.location.href = 'contacto.html';
+                }
+            });
         });
     </script>
 </body>
