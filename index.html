@@ -286,36 +286,24 @@
             opacity: 1;
             color: var(--primary-color);
         }
-        /* Secciones mejoradas */
+        /* Secciones mejoradas - SIN MARCOS EXTERNOS */
         section {
             max-width: 1000px;
             margin: 80px auto 40px auto;
             padding: 40px 30px;
-            background-color: var(--section-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
             opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s ease-out;
-            border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             overflow: hidden;
-        }
-        section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
         }
         section.visible {
             opacity: 1;
             transform: translateY(0);
         }
+        /* Títulos mejorados con degradado elegante */
         h2 {
-            color: var(--primary-color);
+            color: transparent;
             text-align: center;
             margin-bottom: 30px;
             font-size: 2.2em;
@@ -323,6 +311,11 @@
             display: inline-block;
             left: 50%;
             transform: translateX(-50%);
+            background: linear-gradient(135deg, #4A90E2, #7B68EE, #00BFFF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
         h2::after {
             content: '';
@@ -331,9 +324,10 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            background: linear-gradient(90deg, #4A90E2, #7B68EE, #00BFFF);
+            border-radius: 2px;
         }
-        /* Servicios mejorados */
+        /* Servicios mejorados - ENCUADRES INTERNOS PROFESIONALES */
         .servicio-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -341,14 +335,14 @@
             margin-top: 30px;
         }
         .card {
-            background: linear-gradient(145deg, var(--card-bg), var(--darker-bg));
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
+            background: linear-gradient(145deg, rgba(35, 35, 35, 0.95), rgba(25, 25, 25, 0.95));
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
             overflow: hidden;
             transition: var(--transition);
             text-align: center;
-            padding: 30px 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 35px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             z-index: 1;
         }
@@ -359,63 +353,78 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 170, 255, 0.1), rgba(255, 204, 0, 0.05));
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(123, 104, 238, 0.05));
             opacity: 0;
             transition: var(--transition);
             z-index: -1;
         }
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            border-color: rgba(74, 144, 226, 0.3);
         }
         .card:hover::before {
             opacity: 1;
         }
         .card i {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: var(--primary-color);
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            color: #4A90E2;
             display: block;
+            text-shadow: 0 0 15px rgba(74, 144, 226, 0.3);
         }
         .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.4em;
+            color: #7B68EE;
+            margin-bottom: 18px;
+            font-size: 1.5em;
+            font-weight: 600;
         }
         .card p {
             color: var(--gray-text);
             font-size: 0.95em;
             line-height: 1.6;
         }
-        /* Precios mejorados */
+        /* Precios mejorados - ENCUADRES INTERNOS PROFESIONALES */
         .precio {
-            background: linear-gradient(145deg, var(--card-bg), var(--darker-bg));
-            padding: 30px;
-            border-left: 6px solid var(--primary-color);
-            margin: 25px 0;
-            border-radius: var(--border-radius);
+            background: linear-gradient(145deg, rgba(35, 35, 35, 0.95), rgba(25, 25, 25, 0.95));
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 16px;
             color: var(--light-text);
-            box-shadow: var(--box-shadow);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
             transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
+            overflow: hidden;
+        }
+        .precio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4A90E2, #7B68EE, #00BFFF);
         }
         .precio:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(74, 144, 226, 0.3);
         }
         .precio h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.4em;
+            color: #7B68EE;
+            margin-bottom: 18px;
+            font-size: 1.5em;
             display: flex;
             align-items: center;
             gap: 10px;
             flex-wrap: wrap;
+            font-weight: 600;
         }
         .precio p {
             color: var(--gray-text);
             line-height: 1.6;
+            font-size: 1.05em;
         }
         ul {
             line-height: 1.8;
@@ -430,26 +439,28 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--primary-color);
+            color: #4A90E2;
             font-weight: bold;
+            font-size: 1.1em;
         }
         /* Botones mejorados */
         .boton-contacto {
             display: inline-block;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #4A90E2, #7B68EE);
             color: white;
             text-decoration: none;
-            border-radius: var(--border-radius);
+            border-radius: 12px;
             margin: 10px 10px;
             font-weight: 600;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
             border: none;
             cursor: pointer;
             position: relative;
             overflow: hidden;
             z-index: 1;
+            font-size: 1.05em;
         }
         .boton-contacto::before {
             content: '';
@@ -458,13 +469,13 @@
             left: 0;
             width: 0%;
             height: 100%;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            background: linear-gradient(135deg, #7B68EE, #4A90E2);
             transition: var(--transition);
             z-index: -1;
         }
         .boton-contacto:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.5);
         }
         .boton-contacto:hover::before {
             width: 100%;
@@ -484,19 +495,21 @@
             text-decoration: none;
             color: var(--light-text);
             transition: var(--transition);
-            padding: 15px;
-            border-radius: var(--border-radius);
+            padding: 20px;
+            border-radius: 16px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
         .red-social:hover {
             transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(74, 144, 226, 0.3);
         }
         .red-social i {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            margin-bottom: 15px;
         }
         .red-social .fa-tiktok {
             color: #000000;
@@ -507,7 +520,7 @@
         }
         .red-social span {
             font-weight: 500;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
         /* Footer mejorado */
         footer {
@@ -538,7 +551,7 @@
         .assistant-toggle {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            background: linear-gradient(135deg, #4A90E2, #7B68EE);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -546,14 +559,14 @@
             color: white;
             font-size: 24px;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 170, 255, 0.5);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
             transition: var(--transition);
             animation: float 3s ease-in-out infinite;
             border: none;
         }
         .assistant-toggle:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(0, 170, 255, 0.7);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.7);
         }
         .assistant-window {
             position: absolute;
@@ -561,22 +574,23 @@
             right: 0;
             width: 350px;
             max-width: 90vw;
-            background: var(--dark-bg);
-            border-radius: var(--border-radius);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             display: none;
             flex-direction: column;
             overflow: hidden;
             transition: var(--transition);
+            backdrop-filter: blur(10px);
         }
         .assistant-window.active {
             display: flex;
             animation: fadeIn 0.3s ease-out;
         }
         .assistant-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            padding: 15px 20px;
+            background: linear-gradient(135deg, #4A90E2, #7B68EE);
+            padding: 18px 20px;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -619,13 +633,13 @@
         }
         .message.user {
             align-self: flex-end;
-            background: var(--primary-color);
+            background: #4A90E2;
             color: white;
             border-bottom-right-radius: 5px;
         }
         .message.assistant {
             align-self: flex-start;
-            background: var(--card-bg);
+            background: rgba(35, 35, 35, 0.9);
             color: var(--light-text);
             border-bottom-left-radius: 5px;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -634,24 +648,25 @@
             display: flex;
             padding: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            background: var(--darker-bg);
+            background: rgba(25, 25, 25, 0.9);
         }
         .assistant-input input {
             flex: 1;
             padding: 12px 15px;
             border: none;
             border-radius: 20px;
-            background: var(--card-bg);
+            background: rgba(40, 40, 40, 0.9);
             color: var(--light-text);
             font-family: 'Poppins', sans-serif;
             font-size: 0.9em;
             outline: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .assistant-input input::placeholder {
             color: var(--gray-text);
         }
         .assistant-send {
-            background: var(--primary-color);
+            background: #4A90E2;
             color: white;
             border: none;
             border-radius: 50%;
@@ -665,7 +680,7 @@
             transition: var(--transition);
         }
         .assistant-send:hover {
-            background: var(--primary-dark);
+            background: #7B68EE;
             transform: scale(1.05);
         }
         .suggested-questions {
@@ -675,7 +690,7 @@
             padding: 0 20px 20px;
         }
         .suggested-question {
-            background: var(--card-bg);
+            background: rgba(35, 35, 35, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--light-text);
             padding: 10px 15px;
@@ -686,7 +701,7 @@
             text-align: left;
         }
         .suggested-question:hover {
-            background: rgba(0, 170, 255, 0.2);
+            background: rgba(74, 144, 226, 0.2);
             transform: translateX(5px);
         }
         /* Botones de sugerencia dinámica */
@@ -697,7 +712,7 @@
             margin-top: 10px;
         }
         .dynamic-suggestions .suggested-question {
-            background: var(--card-bg);
+            background: rgba(35, 35, 35, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--light-text);
             padding: 8px 12px;
@@ -710,7 +725,7 @@
             max-width: 200px;
         }
         .dynamic-suggestions .suggested-question:hover {
-            background: rgba(0, 170, 255, 0.2);
+            background: rgba(74, 144, 226, 0.2);
             transform: translateX(0);
         }
         /* Tooltip para el asistente */
@@ -718,7 +733,7 @@
             position: absolute;
             bottom: 70px;
             right: 0;
-            background: var(--dark-bg);
+            background: rgba(30, 30, 30, 0.95);
             color: var(--lighter-text);
             padding: 8px 12px;
             border-radius: 6px;
@@ -788,7 +803,7 @@
         
         .oferta-container {
             background: linear-gradient(145deg, #1a2a3a, #0d1a26);
-            border-radius: var(--border-radius);
+            border-radius: 16px;
             box-shadow: 0 15px 40px rgba(0, 100, 255, 0.4);
             padding: 30px;
             max-width: 380px;
