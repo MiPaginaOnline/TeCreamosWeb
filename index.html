@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeCreamosWeb+ | Diseño Páginas Web</title>
+  <title>TeCreamosWeb+ | Oferta Black Friday</title>
 
   <!-- Verificación Google -->
   <meta name="google-site-verification" content="zcqWNXO5PxwuhC8eUUWnLJH8WTvc4ASWszyT6URT9AM" />
@@ -779,7 +779,7 @@
             z-index: 2;
         }
         
-        /* ANUNCIO DE OFERTA - MEJORADO */
+        /* ANUNCIO DE OFERTA BLACK FRIDAY - MEJORADO */
         .oferta-popup {
             position: fixed;
             top: 0;
@@ -802,17 +802,18 @@
         }
         
         .oferta-container {
-            background: linear-gradient(145deg, #1a2a3a, #0d1a26);
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
             border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(0, 100, 255, 0.4);
+            box-shadow: 0 15px 40px rgba(255, 0, 0, 0.4);
             padding: 30px;
             max-width: 380px;
             width: 90%;
             position: relative;
-            border: 1px solid rgba(0, 150, 255, 0.3);
+            border: 2px solid #ff3333;
             text-align: center;
             animation: popIn 0.5s ease-out forwards;
             overflow: hidden;
+            font-family: 'Poppins', sans-serif;
         }
         
         .oferta-container::before {
@@ -821,8 +822,8 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00aaff, #00ffaa, #aaff00);
+            height: 5px;
+            background: linear-gradient(90deg, #ff3333, #ff9900, #ff3333);
         }
         
         @keyframes popIn {
@@ -856,19 +857,19 @@
         
         .oferta-icon {
             font-size: 2.5em;
-            color: #00ffaa;
+            color: #ff3333;
             margin-bottom: 15px;
-            text-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
         }
         
         .oferta-titulo-principal {
-            color: #00ffaa;
+            color: #ff3333;
             font-size: 1.5em;
             margin-bottom: 8px;
             font-weight: 700;
             width: 100%;
             text-align: center;
-            text-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
             position: relative;
         }
         
@@ -880,11 +881,11 @@
             transform: translateX(-50%);
             width: 80%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #00ffaa, transparent);
+            background: linear-gradient(90deg, transparent, #ff3333, transparent);
         }
         
         .oferta-subtitulo {
-            color: #aaff00;
+            color: #ff9900;
             font-size: 1em;
             margin-bottom: 25px;
             font-weight: 500;
@@ -907,14 +908,14 @@
         }
         
         .oferta-precio-actual {
-            color: #00ffaa;
+            color: #ff3333;
             font-size: 1.8em;
             font-weight: 800;
-            text-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
         }
         
         .oferta-descuento {
-            background: linear-gradient(135deg, #ff3366, #ff0033);
+            background: linear-gradient(135deg, #ff3333, #cc0000);
             color: white;
             padding: 8px 20px;
             border-radius: 25px;
@@ -923,6 +924,61 @@
             display: inline-block;
             margin-bottom: 20px;
             box-shadow: 0 5px 15px rgba(255, 0, 51, 0.4);
+        }
+        
+        .oferta-tiempo {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+        
+        .tiempo-item {
+            background: rgba(255, 51, 51, 0.2);
+            border: 1px solid rgba(255, 51, 51, 0.5);
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 55px;
+        }
+        
+        .tiempo-numero {
+            color: #ff3333;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        
+        .tiempo-texto {
+            color: var(--gray-text);
+            font-size: 0.7em;
+        }
+        
+        .oferta-boton {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff3333, #cc0000);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-top: 15px;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(255, 0, 51, 0.4);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .oferta-boton:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 0, 51, 0.6);
+            background: linear-gradient(135deg, #cc0000, #ff3333);
+        }
+        
+        .oferta-aviso {
+            color: var(--gray-text);
+            font-size: 0.8em;
+            margin-top: 15px;
         }
         
         /* Responsive mejorado */
@@ -1028,6 +1084,19 @@
                     font-size: 0.9em;
                     padding: 6px 15px;
                 }
+                
+                .tiempo-item {
+                    min-width: 50px;
+                    padding: 8px;
+                }
+                
+                .tiempo-numero {
+                    font-size: 1.2em;
+                }
+                
+                .tiempo-texto {
+                    font-size: 0.65em;
+                }
             }
         }
         @media (max-width: 600px) {
@@ -1102,7 +1171,7 @@
     </style>
 </head>
 <body>
-    <!-- Anuncio de oferta -->
+    <!-- Anuncio de oferta Black Friday -->
     <div class="oferta-popup" id="ofertaPopup">
         <div class="oferta-container">
             <button class="oferta-close" id="ofertaClose" aria-label="Cerrar anuncio">
@@ -1113,8 +1182,8 @@
                 <i class="fas fa-bolt"></i>
             </div>
             
-            <h2 class="oferta-titulo-principal">Oferta Página Web</h2>
-            <p class="oferta-subtitulo">Descuento especial por tiempo limitado</p>
+            <h2 class="oferta-titulo-principal">BLACK FRIDAY</h2>
+            <p class="oferta-subtitulo">Oferta especial por tiempo limitado</p>
             
             <div class="oferta-precios">
                 <div class="oferta-precio-anterior">250€</div>
@@ -1122,6 +1191,26 @@
             </div>
             
             <div class="oferta-descuento">Ahorra 50€</div>
+            
+            <div class="oferta-tiempo">
+                <div class="tiempo-item">
+                    <div class="tiempo-numero" id="dias">03</div>
+                    <div class="tiempo-texto">Días</div>
+                </div>
+                <div class="tiempo-item">
+                    <div class="tiempo-numero" id="horas">12</div>
+                    <div class="tiempo-texto">Horas</div>
+                </div>
+                <div class="tiempo-item">
+                    <div class="tiempo-numero" id="minutos">45</div>
+                    <div class="tiempo-texto">Min</div>
+                </div>
+                <div class="tiempo-item">
+                    <div class="tiempo-numero" id="segundos">30</div>
+                    <div class="tiempo-texto">Seg</div>
+                </div>
+            </div>
+            <p class="oferta-aviso">Oferta válida hasta el 30 de noviembre</p>
         </div>
     </div>
 
@@ -1241,7 +1330,7 @@
     <section id="precios">
         <h2>Precios</h2>
         <div class="precio precio-oferta">
-            <div class="etiqueta-oferta">¡Oferta!</div>
+            <div class="etiqueta-oferta">¡Black Friday!</div>
             <h3>Página web – 
                 <span class="precio-anterior">250€</span>
                 <span class="precio-actual">200€</span>
@@ -1252,7 +1341,7 @@
             </a>
         </div>
         <div class="precio precio-oferta">
-            <div class="etiqueta-oferta">¡Oferta!</div>
+            <div class="etiqueta-oferta">¡Black Friday!</div>
             <h3>Redes sociales + Página web – 
                 <span class="precio-anterior">300€</span>
                 <span class="precio-actual">250€</span>
@@ -1521,7 +1610,7 @@
             });
         });
 
-        // ANUNCIO DE OFERTA - Funcionalidad
+        // ANUNCIO DE OFERTA BLACK FRIDAY - Funcionalidad
         // Mostrar el anuncio después de 1 segundo
         setTimeout(function() {
             document.getElementById('ofertaPopup').classList.add('active');
@@ -1545,6 +1634,45 @@
                 document.getElementById('ofertaPopup').classList.remove('active');
             }
         });
+        
+        // Botón de oferta
+        document.getElementById('ofertaBoton').addEventListener('click', function() {
+            // Ir a la sección de contacto
+            document.getElementById('ofertaPopup').classList.remove('active');
+            window.scrollTo({
+                top: document.getElementById('contacto').offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Contador regresivo para Black Friday con segundos
+        function actualizarContador() {
+            const ahora = new Date();
+            const blackFriday = new Date(ahora.getFullYear(), 10, 29); // 29 de noviembre
+            const diferencia = blackFriday - ahora;
+            
+            if (diferencia > 0) {
+                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+                
+                document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+                document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+                document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+                document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+            } else {
+                // Si ya pasó Black Friday, mostrar 0
+                document.getElementById('dias').textContent = '00';
+                document.getElementById('horas').textContent = '00';
+                document.getElementById('minutos').textContent = '00';
+                document.getElementById('segundos').textContent = '00';
+            }
+        }
+        
+        // Actualizar el contador cada segundo
+        actualizarContador();
+        setInterval(actualizarContador, 1000);
 
         // DETECCIÓN DE DISPOSITIVO Y MANEJO DE BOTONES DE CONTACTO
         function isMobileDevice() {
