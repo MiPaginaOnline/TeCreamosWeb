@@ -1194,23 +1194,28 @@
             
             <div class="oferta-tiempo">
                 <div class="tiempo-item">
-                    <div class="tiempo-numero" id="dias">03</div>
+                    <div class="tiempo-numero" id="dias">00</div>
                     <div class="tiempo-texto">Días</div>
                 </div>
                 <div class="tiempo-item">
-                    <div class="tiempo-numero" id="horas">12</div>
+                    <div class="tiempo-numero" id="horas">00</div>
                     <div class="tiempo-texto">Horas</div>
                 </div>
                 <div class="tiempo-item">
-                    <div class="tiempo-numero" id="minutos">45</div>
+                    <div class="tiempo-numero" id="minutos">00</div>
                     <div class="tiempo-texto">Min</div>
                 </div>
                 <div class="tiempo-item">
-                    <div class="tiempo-numero" id="segundos">30</div>
+                    <div class="tiempo-numero" id="segundos">00</div>
                     <div class="tiempo-texto">Seg</div>
                 </div>
             </div>
-            <p class="oferta-aviso">Oferta válida hasta el 30 de noviembre</p>
+            
+            <button class="oferta-boton" id="ofertaBoton">
+                Solicitar Oferta Black Friday
+            </button>
+            
+            <p class="oferta-aviso">Oferta válida hasta el 8 de diciembre</p>
         </div>
     </div>
 
@@ -1610,7 +1615,7 @@
             });
         });
 
-        // ANUNCIO DE OFERTA BLACK FRIDAY - Funcionalidad
+        // ANUNCIO DE OFERTA BLACK FRIDAY - Funcionalidad CORREGIDA
         // Mostrar el anuncio después de 1 segundo
         setTimeout(function() {
             document.getElementById('ofertaPopup').classList.add('active');
@@ -1645,13 +1650,20 @@
             });
         });
         
-        // Contador regresivo para Black Friday con segundos
+        // CONTADOR REGRESIVO CORREGIDO para Black Friday (6 nov - 8 dic)
         function actualizarContador() {
             const ahora = new Date();
-            const blackFriday = new Date(ahora.getFullYear(), 10, 29); // 29 de noviembre
-            const diferencia = blackFriday - ahora;
+            const añoActual = ahora.getFullYear();
             
-            if (diferencia > 0) {
+            // Fechas de inicio y fin de la oferta
+            const inicioOferta = new Date(añoActual, 10, 6); // 6 de noviembre
+            const finOferta = new Date(añoActual, 11, 8, 23, 59, 59); // 8 de diciembre a las 23:59:59
+            
+            // Verificar si estamos dentro del período de oferta
+            if (ahora >= inicioOferta && ahora <= finOferta) {
+                // Calcular tiempo restante hasta el fin de la oferta
+                const diferencia = finOferta - ahora;
+                
                 const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
                 const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
@@ -1661,12 +1673,20 @@
                 document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
                 document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
                 document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
-            } else {
-                // Si ya pasó Black Friday, mostrar 0
+            } else if (ahora < inicioOferta) {
+                // Si aún no ha comenzado la oferta
                 document.getElementById('dias').textContent = '00';
                 document.getElementById('horas').textContent = '00';
                 document.getElementById('minutos').textContent = '00';
                 document.getElementById('segundos').textContent = '00';
+                document.querySelector('.oferta-aviso').textContent = 'Oferta próxima: 6 de noviembre';
+            } else {
+                // Si ya pasó la oferta
+                document.getElementById('dias').textContent = '00';
+                document.getElementById('horas').textContent = '00';
+                document.getElementById('minutos').textContent = '00';
+                document.getElementById('segundos').textContent = '00';
+                document.querySelector('.oferta-aviso').textContent = 'Oferta finalizada';
             }
         }
         
@@ -1674,26 +1694,16 @@
         actualizarContador();
         setInterval(actualizarContador, 1000);
 
-        // DETECCIÓN DE DISPOSITIVO Y MANEJO DE BOTONES DE CONTACTO
-        function isMobileDevice() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-        }
-
-        // Manejar clics en botones de contacto
+        // FUNCIONALIDAD DE CORREO MEJORADA - IGUAL PARA MÓVIL Y ESCRITORIO
         document.querySelectorAll('.contacto-btn').forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 const service = this.getAttribute('data-service');
                 
-                if (isMobileDevice()) {
-                    // En móvil: usar mailto como antes
-                    let subject = 'Solicitud de ' + service;
-                    let body = 'Hola, me interesa solicitar ' + service + '. Por favor, contáctenme para más detalles.';
-                    window.location.href = 'mailto:tecreamosweb@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-                } else {
-                    // En escritorio: ir a la página de contacto
-                    window.location.href = 'contacto.html';
-                }
+                // Usar mailto para todos los dispositivos
+                let subject = 'Solicitud de ' + service;
+                let body = 'Hola, me interesa solicitar ' + service + '. Por favor, contáctenme para más detalles.';
+                window.location.href = 'mailto:tecreamosweb@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
             });
         });
     </script>
