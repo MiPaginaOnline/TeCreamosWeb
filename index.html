@@ -952,29 +952,6 @@
             font-size: 0.7em;
         }
         
-        .oferta-boton {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff3333, #cc0000);
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.1em;
-            margin-top: 15px;
-            transition: var(--transition);
-            box-shadow: 0 5px 15px rgba(255, 0, 51, 0.4);
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        
-        .oferta-boton:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 0, 51, 0.6);
-            background: linear-gradient(135deg, #cc0000, #ff3333);
-        }
-        
         .oferta-aviso {
             color: var(--gray-text);
             font-size: 0.8em;
@@ -1211,9 +1188,7 @@
                 </div>
             </div>
             
-            <button class="oferta-boton" id="ofertaBoton">
-                Solicitar Oferta Black Friday
-            </button>
+            <!-- EL BOTÓN HA SIDO ELIMINADO -->
             
             <p class="oferta-aviso">Oferta válida hasta el 8 de diciembre</p>
         </div>
@@ -1341,7 +1316,7 @@
                 <span class="precio-actual">200€</span>
             </h3>
             <p>Incluye diseño adaptado a tu negocio, información de contacto y productos/servicios. Precio negociable según tus necesidades.</p>
-            <a href="#" class="boton-contacto contacto-btn" style="margin-top: 20px; display: block; text-align: center;" data-service="Página Web">
+            <a href="contacto.html" class="boton-contacto contacto-btn" style="margin-top: 20px; display: block; text-align: center;" data-service="Página Web">
                 <i class="fas fa-rocket"></i> Solicita tu web hoy
             </a>
         </div>
@@ -1352,7 +1327,7 @@
                 <span class="precio-actual">250€</span>
             </h3>
             <p>Configuración y diseño inicial de perfiles en redes sociales junto con tu página web. Ideal para aumentar visibilidad. Precio negociable.</p>
-            <a href="#" class="boton-contacto contacto-btn" style="margin-top: 20px; display: block; text-align: center;" data-service="Página Web + Redes Sociales">
+            <a href="contacto.html" class="boton-contacto contacto-btn" style="margin-top: 20px; display: block; text-align: center;" data-service="Página Web + Redes Sociales">
                 <i class="fas fa-rocket"></i> Solicitar
             </a>
         </div>
@@ -1381,7 +1356,7 @@
         <h2>Contacto</h2>
         <p style="text-align: center;">¿Quieres dar el salto al mundo digital? Escríbenos y solicita tu web personalizada.</p>
         <div style="text-align: center; margin-top: 30px;">
-            <a href="#" class="boton-contacto contacto-btn" data-service="Consulta General">
+            <a href="contacto.html" class="boton-contacto contacto-btn" data-service="Consulta General">
                 <i class="fas fa-envelope"></i> Escríbenos
             </a>
         </div>
@@ -1640,16 +1615,6 @@
             }
         });
         
-        // Botón de oferta
-        document.getElementById('ofertaBoton').addEventListener('click', function() {
-            // Ir a la sección de contacto
-            document.getElementById('ofertaPopup').classList.remove('active');
-            window.scrollTo({
-                top: document.getElementById('contacto').offsetTop - 80,
-                behavior: 'smooth'
-            });
-        });
-        
         // CONTADOR REGRESIVO CORREGIDO para Black Friday (6 nov - 8 dic)
         function actualizarContador() {
             const ahora = new Date();
@@ -1693,19 +1658,6 @@
         // Actualizar el contador cada segundo
         actualizarContador();
         setInterval(actualizarContador, 1000);
-
-        // FUNCIONALIDAD DE CORREO MEJORADA - IGUAL PARA MÓVIL Y ESCRITORIO
-        document.querySelectorAll('.contacto-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const service = this.getAttribute('data-service');
-                
-                // Usar mailto para todos los dispositivos
-                let subject = 'Solicitud de ' + service;
-                let body = 'Hola, me interesa solicitar ' + service + '. Por favor, contáctenme para más detalles.';
-                window.location.href = 'mailto:tecreamosweb@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-            });
-        });
     </script>
 </body>
 </html>
