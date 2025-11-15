@@ -958,6 +958,28 @@
             margin-top: 15px;
         }
         
+        /* CARRUSEL PARA MÓVIL - NUEVO ESTILO */
+        .servicio-carrusel {
+            display: none;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+        
+        .carrusel-contenedor {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 300%; /* 3 tarjetas = 300% */
+        }
+        
+        .carrusel-item {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        
         /* Responsive mejorado */
         @media (max-width: 768px) {
             .nav-links {
@@ -1037,6 +1059,15 @@
             }
             .precio-actual {
                 font-size: 1.3em;
+            }
+            
+            /* CARRUSEL PARA MÓVIL - ACTIVAR EN MÓVIL */
+            .servicio-cards {
+                display: none;
+            }
+            
+            .servicio-carrusel {
+                display: block;
             }
             
             /* Responsive para anuncio de oferta */
@@ -1265,6 +1296,35 @@
     <section id="servicios">
         <h2>¿Qué ofrecemos?</h2>
         <p style="text-align: center;">Con nuestras soluciones digitales podrás hacer crecer tu negocio y llegar a más clientes:</p>
+        
+        <!-- Carrusel para móvil -->
+        <div class="servicio-carrusel">
+            <div class="carrusel-contenedor" id="carruselContenedor">
+                <div class="carrusel-item">
+                    <div class="card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Página Web</h3>
+                        <p>Diseño moderno, adaptable a móviles y optimizado para mostrar lo mejor de tu negocio.</p>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <div class="card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Asesoramiento</h3>
+                        <p>Te guiamos paso a paso en el uso de tus nuevas herramientas digitales y resolvemos tus dudas.</p>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <div class="card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Redes Sociales</h3>
+                        <p>Configuramos y diseñamos tus perfiles en redes sociales para aumentar tu visibilidad y atraer clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Grid para escritorio -->
         <div class="servicio-cards">
             <div class="card">
                 <i class="fas fa-globe"></i>
@@ -1658,6 +1718,107 @@
         // Actualizar el contador cada segundo
         actualizarContador();
         setInterval(actualizarContador, 1000);
+
+        // CARRUSEL PARA MÓVIL - NUEVO CÓDIGO
+        let carruselInterval;
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const carruselContenedor = document.getElementById('carruselContenedor');
+        const serviciosSection = document.getElementById('servicios');
+        
+        // Función para mover el carrusel
+        function moveCarrusel(slideIndex) {
+            currentSlide = slideIndex;
+            carruselContenedor.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        // Función para avanzar al siguiente slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            moveCarrusel(currentSlide);
+        }
+        
+        // Función para iniciar el carrusel automático
+        function startCarrusel() {
+            carruselInterval = setInterval(nextSlide, 3000);
+        }
+        
+        // Función para detener el carrusel automático
+        function stopCarrusel() {
+            clearInterval(carruselInterval);
+        }
+        
+        // Detectar si estamos en móvil
+        function isMobile() {
+            return window.innerWidth <= 768;
+        }
+        
+        // Iniciar carrusel si estamos en móvil
+        if (isMobile()) {
+            startCarrusel();
+        }
+        
+        // Detectar cambios de tamaño de pantalla
+        window.addEventListener('resize', function() {
+            if (isMobile()) {
+                startCarrusel();
+            } else {
+                stopCarrusel();
+                moveCarrusel(0); // Resetear a la primera tarjeta
+            }
+        });
+        
+        // Detectar interacción táctil
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carruselContenedor.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            stopCarrusel(); // Detener el carrusel automático al interactuar
+        });
+        
+        carruselContenedor.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        // Manejar el deslizamiento
+        function handleSwipe() {
+            const swipeThreshold = 50; // Mínimo de píxeles para considerar un deslizamiento
+            
+            if (touchEndX < touchStartX - swipeThreshold) {
+                // Deslizamiento hacia la izquierda - siguiente slide
+                nextSlide();
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+                // Deslizamiento hacia la derecha - slide anterior
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                moveCarrusel(currentSlide);
+            }
+            
+            // Reiniciar el carrusel automático después de 5 segundos de inactividad
+            setTimeout(() => {
+                if (isMobile()) {
+                    startCarrusel();
+                }
+            }, 5000);
+        }
+        
+        // Observar cuando el usuario sale de la sección de servicios
+        const serviciosObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting && isMobile()) {
+                    // Si el usuario sale de la sección, reiniciar el carrusel
+                    stopCarrusel();
+                    setTimeout(() => {
+                        if (isMobile()) {
+                            startCarrusel();
+                        }
+                    }, 1000);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        serviciosObserver.observe(serviciosSection);
     </script>
 </body>
 </html>
