@@ -180,7 +180,6 @@
         .logo span:first-child { color: var(--primary-color); }
         .logo span:nth-child(2) { color: var(--lighter-text); }
         .logo span:nth-child(3) { color: var(--secondary-color); }
-        .logo span:last-child { color: var(--secondary-color); }
         .nav-links { display: flex; }
         .nav-links a {
             color: var(--lighter-text);
@@ -389,7 +388,8 @@
                 opacity: 0;
                 position: absolute; /* Posición absoluta para superposición */
                 transform: translateY(100%); /* Empieza fuera de la vista hacia abajo */
-                transition: none; /* Desactiva la transición CSS para que funcione con JS */
+                /* Transición de deslizamiento */
+                transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
             }
 
             .servicio-cards .card.active {
@@ -608,7 +608,7 @@
         }
         .assistant-window.active {
             display: flex;
-            animation: fadeIn 0.3 ease-out;
+            animation: fadeIn 0.3s ease-out;
         }
         .assistant-header {
             background: linear-gradient(135deg, #4A90E2, #7B68EE);
@@ -1079,6 +1079,14 @@
             section:first-of-type {
                 margin-top: 20px;
             }
+            /* --- AJUSTE DE MÁRGENES EN MÓVIL --- */
+            section#servicios {
+                margin: 20px auto 10px auto; /* Reduce el margen inferior */
+            }
+            section#porque {
+                margin-top: 10px; /* Reduce el margen superior */
+            }
+            /* --- FIN AJUSTE MÁRGENES --- */
             section {
                 margin: 30px auto 20px auto;
                 padding: 25px 15px;
