@@ -316,37 +316,32 @@
             background: linear-gradient(90deg, #4A90E2, #7B68EE, #00BFFF);
             border-radius: 2px;
         }
-        /* Carrusel en móviles */
+        /* Carrusel de servicios */
         .servicio-carousel {
             overflow: hidden;
             width: 100%;
+            margin-top: 30px;
         }
         .servicio-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 30px;
-            transition: transform 0.5s ease-in-out;
         }
         @media (max-width: 600px) {
             .servicio-cards {
                 display: flex;
-                width: 300%;
-                flex-wrap: nowrap;
-                animation: carousel 9s infinite linear;
-            }
-            .servicio-cards:hover {
-                animation-play-state: paused;
+                width: 300%; /* 3 tarjetas × 100% */
+                animation: slideCards 9s infinite ease-in-out;
             }
             .card {
                 flex: 0 0 100%;
                 min-width: 100%;
+                box-sizing: border-box;
             }
-            @keyframes carousel {
-                0%   { transform: translateX(0); }
-                33%  { transform: translateX(-33.333%); }
-                66%  { transform: translateX(-66.666%); }
-                100% { transform: translateX(-100%); }
+            @keyframes slideCards {
+                0%, 33.33% { transform: translateX(0); }
+                33.34%, 66.66% { transform: translateX(-100%); }
+                66.67%, 100% { transform: translateX(-200%); }
             }
         }
         .card {
@@ -1255,7 +1250,7 @@
             </div>
         </div>
     </section>
-    <!-- Resto sin cambios -->
+    <!-- Resto del contenido (sin cambios) -->
     <section id="porque">
         <h2>¿Por qué elegirnos?</h2>
         <ul>
