@@ -1627,44 +1627,47 @@
                 document.getElementById('ofertaPopup').classList.remove('active');
             }
         });
-        // CONTADOR REGRESIVO CORREGIDO para Black Friday (6 nov - 8 dic)
-        function actualizarContador() {
-            const ahora = new Date();
-            const añoActual = ahora.getFullYear();
-            // Fechas de inicio y fin de la oferta
-            const inicioOferta = new Date(añoActual, 10, 6); // 6 de noviembre
-            const finOferta = new Date(añoActual, 11, 8, 23, 59, 59); // 8 de diciembre a las 23:59:59
-            // Verificar si estamos dentro del período de oferta
-            if (ahora >= inicioOferta && ahora <= finOferta) {
-                // Calcular tiempo restante hasta el fin de la oferta
-                const diferencia = finOferta - ahora;
-                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-                const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-                const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-                document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
-                document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
-                document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
-                document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
-            } else if (ahora < inicioOferta) {
-                // Si aún no ha comenzado la oferta
-                document.getElementById('dias').textContent = '00';
-                document.getElementById('horas').textContent = '00';
-                document.getElementById('minutos').textContent = '00';
-                document.getElementById('segundos').textContent = '00';
-                document.querySelector('.oferta-aviso').textContent = 'Oferta próxima: 6 de noviembre';
-            } else {
-                // Si ya pasó la oferta
-                document.getElementById('dias').textContent = '00';
-                document.getElementById('horas').textContent = '00';
-                document.getElementById('minutos').textContent = '00';
-                document.getElementById('segundos').textContent = '00';
-                document.querySelector('.oferta-aviso').textContent = 'Oferta finalizada';
-            }
-        }
-        // Actualizar el contador cada segundo
-        actualizarContador();
-        setInterval(actualizarContador, 1000);
+// CONTADOR REGRESIVO CORREGIDO para Black Friday (6 nov - 19 dic 15:00)
+function actualizarContador() {
+    const ahora = new Date();
+    const añoActual = ahora.getFullYear();
+    // Fechas de inicio y fin de la oferta
+    const inicioOferta = new Date(añoActual, 10, 6); // 6 de noviembre
+    const finOferta = new Date(añoActual, 11, 19, 15, 0, 0); // 19 de diciembre a las 15:00:00
+    
+    // Verificar si estamos dentro del período de oferta
+    if (ahora >= inicioOferta && ahora <= finOferta) {
+        // Calcular tiempo restante hasta el fin de la oferta
+        const diferencia = finOferta - ahora;
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        
+        document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+        document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+        document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+        document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+    } else if (ahora < inicioOferta) {
+        // Si aún no ha comenzado la oferta
+        document.getElementById('dias').textContent = '00';
+        document.getElementById('horas').textContent = '00';
+        document.getElementById('minutos').textContent = '00';
+        document.getElementById('segundos').textContent = '00';
+        document.querySelector('.oferta-aviso').textContent = 'Oferta próxima: 6 de noviembre';
+    } else {
+        // Si ya pasó la oferta
+        document.getElementById('dias').textContent = '00';
+        document.getElementById('horas').textContent = '00';
+        document.getElementById('minutos').textContent = '00';
+        document.getElementById('segundos').textContent = '00';
+        document.querySelector('.oferta-aviso').textContent = 'Oferta finalizada';
+    }
+}
+
+// Actualizar el contador cada segundo
+setInterval(actualizarContador, 1000);
+actualizarContador(); // Ejecutar inmediatamente
     </script>
 </body>
 </html>
